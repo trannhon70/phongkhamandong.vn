@@ -96,11 +96,10 @@
                 });
             });
         });
-    function getCurrentVietnamTimestamp() {
-        const utcOffset = 7 * 60 * 60 * 1000; // UTC+7 in milliseconds
-        const localTime = Date.now() + utcOffset; // Adjust for Vietnam time
-        return Math.floor(localTime / 1000); // Convert to Unix timestamp
-    }
+        function getCurrentVietnamTimestamp() {
+    const oneHourInMilliseconds = 60 * 60 * 1000; // 1 hour in milliseconds
+    return Math.floor((Date.now() - oneHourInMilliseconds) / 1000); // Convert to Unix timestamp
+}
     document.querySelector('button').addEventListener('click', function() {
         // Lấy giá trị từ các trường trong form
         var hoten = document.getElementById('exampleFormControlInput1').value;
