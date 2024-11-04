@@ -121,7 +121,7 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
             </div>
             <div class="mb-3 col-sm-6">
                 <label for="idstatus" class="form-label">Nguồn Url:</label>
-                <input type="text" value="<?php echo $getById['nguon'] ?>" class="form-control" name="url" disabled>
+                <input type="text" value="<?php echo $getById['nguon'] ?>" class="form-control" name="nguon" <?php echo (Session::get('role') === '1') ? '' : 'disabled'; ?>>
             </div>
 
         </div>

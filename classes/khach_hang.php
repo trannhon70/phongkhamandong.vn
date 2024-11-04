@@ -206,6 +206,7 @@ class KhachHang
         $note = mysqli_real_escape_string($this->db->link, $data['note']);
         $ketqua = mysqli_real_escape_string($this->db->link, $data['ketqua']);
         $mahen = mysqli_real_escape_string($this->db->link, $data['mahen']);
+        $nguon = mysqli_real_escape_string($this->db->link, $data['nguon']);
         $user_tuvan = Session::get('id');
 
         if ($id !== '') {
@@ -214,7 +215,8 @@ class KhachHang
              note = '$note' ,
              ketqua = '$ketqua',
              user_tuvan = '$user_tuvan',
-             mahen = '$mahen'
+             mahen = '$mahen',
+             nguon= '$nguon'
              WHERE id = '$id'";
             $result = $this->db->update($query);
             if ($result) {

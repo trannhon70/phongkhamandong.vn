@@ -1,6 +1,6 @@
 <?php 
-    // $local = 'http://localhost/phongkhamandong.vn';
-    $local = 'https://phongkhamandong.vn';
+    $local = 'http://localhost/phongkhamandong.vn';
+    // $local = 'https://phongkhamandong.vn';
 ?>
 <!DOCTYPE html>
 <html lang="en">
