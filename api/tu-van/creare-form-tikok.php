@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data)) {
     
     $sdt = isset($data['sdt']) ? htmlspecialchars(strip_tags($data['sdt'])) : '';
     $trieuchung = isset($data['trieuchung']) ? htmlspecialchars(strip_tags($data['trieuchung'])) : '';
+    $nguon = isset($data['nguon']) ? htmlspecialchars(strip_tags($data['nguon'])) : '';
 
     $ngaykham = isset($data['ngaykham']) ? htmlspecialchars(strip_tags($data['ngaykham'])) : '';
     
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data)) {
         } else {
             
             $sql = "INSERT INTO admin_khachhang (hoten, ngaysinh, sdt, trieuchung,ngaykham,giokham, status, note, ketqua, nguon, user_tuvan,mahen, created_at,form) 
-                VALUES ('$hoten', '', '$sdt', '$trieuchung','$ngaykham','', 0, '', 0, '', 0,'', '$created_at', 'tư vấn')";
+                VALUES ('$hoten', '', '$sdt', '$trieuchung','$ngaykham','', 0, '', 0, '$nguon', 0,'', '$created_at', 'tư vấn')";
 
             $result = $db->insert($sql);
 

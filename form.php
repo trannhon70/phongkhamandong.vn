@@ -60,6 +60,13 @@
                     <label for="exampleFormControlInput1">Số điện thoại</label>
                     <input name="sdt" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Nhập Số điện thoại">
                 </div>
+                <div class="form-group">
+                    <label for="sourceSelect">Nguồn đến</label>
+                    <select style="width:100%;" class="custom-select" id="sourceSelect" aria-label="Default select example">
+                        <option value="Tiktok" selected >Tiktok</option>
+                        <option value="Facebook">Facebook</option>
+                    </select>
+                </div>
                 <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="flexCheckbox" id="flexCheckbox1" value="Bao quy đầu" checked>
@@ -105,12 +112,16 @@
         var hoten = document.getElementById('exampleFormControlInput1').value;
         var sdt = document.querySelector('input[name="sdt"]').value;
         var trieuchung = document.querySelector('input[name="flexCheckbox"]:checked').value;
+        const nguonDen =document.querySelector('#sourceSelect');
+        const selectedValue = nguonDen.value;
+        
 
         let formData = {
             hoten: hoten,
             sdt: sdt,
             trieuchung: trieuchung,
-            ngaykham: getCurrentVietnamTimestamp()
+            ngaykham: getCurrentVietnamTimestamp(),
+            nguon:selectedValue
         };
 
 
