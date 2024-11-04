@@ -98,7 +98,7 @@ class KhachHang
                   FROM admin_khachhang khachHang
                   LEFT JOIN admin_user user ON khachHang.user_tuvan = user.id
                   WHERE 1=1"; // 1=1 để dễ dàng thêm điều kiện vào sau này
-        
+
         if ($sdt) {
             $query .= " AND khachHang.sdt LIKE '%$sdt%'";
         }
@@ -110,21 +110,21 @@ class KhachHang
         if ($form) {
             $query .= " AND khachHang.form LIKE '%$form%'";
         }
-        
+
         if ($startDate && $endDate) {
             $startDate = DateTime::createFromFormat('d/m/Y', $startDate);
             $endDate = DateTime::createFromFormat('d/m/Y', $endDate);
-    
+
             if ($startDate && $endDate) {
                 $format_startDate = $startDate->format('Y-m-d');
                 $format_endDate = $endDate->format('Y-m-d');
                 $query .= " AND DATE(khachHang.ngaykham) BETWEEN '$format_startDate' AND '$format_endDate'";
             }
         }
-        
+
         $query .= " ORDER BY khachHang.id DESC 
                     LIMIT $limit OFFSET $offset";
-        
+
         $result = $this->db->select($query);
         return $result;
     }
@@ -137,12 +137,12 @@ class KhachHang
         $query = "SELECT COUNT(*) AS total 
                   FROM admin_khachhang 
                   WHERE 1=1"; // Sử dụng 1=1 để dễ dàng thêm điều kiện
-    
+
         // Kiểm tra và thêm điều kiện ngày tháng
         if (!empty($startDate) && !empty($endDate)) {
             $startDateObj = DateTime::createFromFormat('d/m/Y', $startDate);
             $endDateObj = DateTime::createFromFormat('d/m/Y', $endDate);
-    
+
             if ($startDateObj && $endDateObj) {
                 $format_startDate = $startDateObj->format('Y-m-d');
                 $format_endDate = $endDateObj->format('Y-m-d');
@@ -161,7 +161,7 @@ class KhachHang
                 $query .= " AND DATE(ngaykham) <= '$format_endDate'";
             }
         }
-    
+
         // Kiểm tra và thêm điều kiện số điện thoại
         if (!empty($sdt)) {
             $query .= " AND sdt LIKE '%$sdt%'";
@@ -174,7 +174,7 @@ class KhachHang
         if (!empty($form)) {
             $query .= " AND form LIKE '%$form%'";
         }
-    
+
         // Thực thi truy vấn và trả về kết quả
         $result = $this->db->select($query);
         if ($result) {
@@ -184,7 +184,7 @@ class KhachHang
             return 0; // Trường hợp không có kết quả nào
         }
     }
-    
+
 
     public function getByIdLichKham($id)
     {
@@ -208,21 +208,26 @@ class KhachHang
         $mahen = mysqli_real_escape_string($this->db->link, $data['mahen']);
         $nguon = mysqli_real_escape_string($this->db->link, $data['nguon']);
         $user_tuvan = Session::get('id');
+        var_dump($nguon);
 
         if ($id !== '') {
             $query = "UPDATE admin_khachhang SET 
-             status = '$status' ,
-             note = '$note' ,
-             ketqua = '$ketqua',
-             user_tuvan = '$user_tuvan',
-             mahen = '$mahen',
-             nguon= '$nguon'
-             WHERE id = '$id'";
+            status = '$status',
+            note = '$note',
+            ketqua = '$ketqua',
+            user_tuvan = '$user_tuvan',
+            mahen = '$mahen'";
+            // Kiểm tra nếu $nguon có giá trị, thêm vào câu truy vấn
+            if (!empty($nguon)) {
+                $query .= ", nguon = '$nguon'";
+            }
+            // Hoàn thành câu truy vấn với điều kiện WHERE
+            $query .= " WHERE id = '$id'";
             $result = $this->db->update($query);
             if ($result) {
                 return array('status' => 'success', 'message' => 'Cập nhật thành công!');
             } else {
-                return array('status' => 'error', 'message' => 'Cập nhật không thất bại!');
+                return array('status' => 'error', 'message' => 'Cập nhật thất bại!');
             }
         }
     }
