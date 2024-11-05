@@ -137,6 +137,15 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
 
 <?php include 'inc/footer.php'; ?>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        <?php if ($message) : ?>
+            toastr.<?php echo $message['status']; ?>('<?php echo $message['message']; ?>');
+        <?php endif; ?>
+    });
+</script>
+
 <?php } else { ?>
     <div style="display: flex; align-items: center; justify-content: center; font-size: 30px; text-transform: uppercase; font-weight: 600; height: 90vh; color: red; ">Trang này không tồn tại</div>
 <?php } ?>

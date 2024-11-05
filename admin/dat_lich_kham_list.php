@@ -68,6 +68,36 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
         text-decoration: none;
         color: #01969a;
     }
+
+    /* Kiểu cho modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 700px;
+  text-align: left;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  transform: translate(0px, -10px);
+}
 </style>
 
 <nav aria-label="breadcrumb">
@@ -265,10 +295,13 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
                         <td style="min-width: 80px;"><?php echo $result['mahen']; ?></td>
                         <td style="min-width: 80px;"><?php echo $result['form']; ?></td>
                         <td class="action" style="min-width: 110px;">
-                            <a class="action_edit" href="dat_lich_kham_edit.php?edit=<?php echo $result['id'] ?>"><i style="font-size: 25px;" class="lni lni-pencil"></i></a>
+                            <a class="action_edit" href="dat_lich_kham_edit.php?edit=<?php echo $result['id'] ?>"><i style="font-size: 20px;" class="lni lni-pencil"></i></a>
                             <?php if(Session::get('role') === '1') {?>
-                                <a onclick="return confirm('Bạn có chắc là bạn muốn xóa khách hàng <?php echo $result['hoten']; ?>')" style="margin-left: 10px;" class="action_delete " href="?delete=<?php echo $result['id'] ?>"><i style="font-size: 24px;" class="fa-solid fa-trash"></i></a>
+                                <a onclick="return confirm('Bạn có chắc là bạn muốn xóa khách hàng <?php echo $result['hoten']; ?>')" style="margin-left: 10px;" class="action_delete " href="?delete=<?php echo $result['id'] ?>"><i style="font-size: 19px;" class="fa-solid fa-trash"></i></a>
                             <?php } ?>
+                            <a class="modal-detail" data-note="<?php echo htmlspecialchars($result['note']); ?>" style="margin-left: 10px;">
+                                <i style="font-size: 20px;" class="fa-solid fa-eye"></i>
+                            </a>
                         </td>
 
                     </tr>
@@ -314,6 +347,17 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
     </div>
 </div>
 
+<!-- Modal -->
+<div id="myModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    
+    <div style="font-size: 20px; font-weight: 600; color: #01969a; " >Thông tin tư vấn : <span class="close">&times;</span></div>
+    <div id="textarea" >
+
+    </div>
+  </div>
+</div>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -322,6 +366,33 @@ $getAllSelectKQ = $khach_hang->getAllSelectKQ();
             toastr.<?php echo $message['status']; ?>('<?php echo $message['message']; ?>');
         <?php endif; ?>
     });
+</script>
+<script>
+    const modal = document.getElementById("myModal");
+const closeBtn = document.querySelector(".close");
+const content = document.getElementById("content");
+
+document.querySelectorAll(".modal-detail").forEach(function(element) {
+        element.addEventListener("click", function(event) {
+            event.preventDefault(); // Ngăn chuyển hướng trang
+            const note = this.getAttribute("data-note");
+            const textarea =document.getElementById("textarea");
+            textarea.innerHTML = `${note}`
+            modal.style.display = "flex";
+        });
+    });
+
+// Khi nhấp vào nút đóng, ẩn modal
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Khi nhấp vào bất kỳ đâu ngoài modal, cũng ẩn modal
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
 </script>
 <?php include 'inc/footer.php'; ?>
 

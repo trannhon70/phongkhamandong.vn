@@ -208,7 +208,10 @@ class KhachHang
         $mahen = mysqli_real_escape_string($this->db->link, $data['mahen']);
         $nguon = mysqli_real_escape_string($this->db->link, $data['nguon']);
         $user_tuvan = Session::get('id');
-        var_dump($nguon);
+
+        if(trim($note) === ""){
+            return array('status' => 'error', 'message' => 'Thông tin note với bệnh nhân không được bỏ trống!');
+        }
 
         if ($id !== '') {
             $query = "UPDATE admin_khachhang SET 
