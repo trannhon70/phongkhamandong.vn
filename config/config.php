@@ -6,7 +6,7 @@ define("DB_NAME", "phongkhamandong.vn");
 
 
 // define("DB_HOST", "localhost");
-// define("DB_USER", "sql_phongkhamandong_vn");
-// define("DB_PASS", "76a377f4fd7388");
-// define("DB_NAME", "sql_phongkhamandong_vn");    
+// define("DB_USER", "sql_phongkhamdak");
+// define("DB_PASS", "c62b87c7beacb");
+// define("DB_NAME", "sql_phongkhamdak");  
 ?>
