@@ -1,0 +1,65 @@
+.dakhoa__motto-fox{
+    position: var(--positon-absolute);
+    width: 100% ;
+    display: var(--display-flex);
+    justify-content:var(--justify-content-center) ;
+    align-items: var(--align-item-center);
+    bottom: -140px;
+    
+}
+
+.dakhoa__motto-container-row {
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    width: var(--width-100);
+    gap: 20px;
+    padding: 0 45px;
+    min-width: 280px;
+    min-height: 100px;
+}
+.dakhoa__motto-container-row-card {
+    width: 175px;
+    background-color: var(--background-color-1F99D5);
+    text-align: var(--text-center);
+    padding: 20px 15px;
+    border-radius: 8px;
+    cursor: var(--cursor-pointer);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(204,202,204,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(204,202,204,1);
+    box-shadow: 0px 0px 5px 3px rgba(204,202,204,1);
+
+
+}
+.dakhoa__motto-container-row-card:hover {
+    transition: all 0.5;
+    background-color: var(--background-color-104D6D);
+    color: var(--color-white) !important;
+}
+.dakhoa__motto-container-row-card:hover > div {
+    color: var(--color-white);
+}
+.dakhoa__motto-container-row-card > div {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-700);
+    color: var(--color-white);
+    text-transform: var(--text-tranform-capitalize);
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.technical{
+    max-width: var(--container);
+    margin: var(--margin-auto);
+}
+
+.technical_title{
+    font-size: var(--font-size-18);
+    color: var(--color-104D6D);
+    font-weight: var(--font-weight-700);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.technical_tb{
+    margin-top: 15px;
+}
