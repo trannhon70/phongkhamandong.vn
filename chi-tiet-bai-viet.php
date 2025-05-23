@@ -162,6 +162,14 @@ if (isset($postDetail) && isset($postDetail['name_khoa'])) {
             })
 
             let baiVietElement = document.getElementById('bai-viet');
+            //chuyển đổi đa khoa => chuyên khoa
+            if (baiVietElement) {
+                const content = baiVietElement.innerHTML;
+                const multiTagRegex = /Đa\sKhoa/gi;
+                const updatedContent = content.replace(multiTagRegex, 'Chuyên khoa');
+                baiVietElement.innerHTML = updatedContent;
+                }
+
             if (baiVietElement) {
                 let pElements = baiVietElement.getElementsByTagName('p');
                 for (let i = 0; i < pElements.length; i++) {
