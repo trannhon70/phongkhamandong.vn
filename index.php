@@ -145,7 +145,7 @@
                                 <hr>
                             </div>
                             <div class="client__container-item-text">
-                                “Công việc của Hiếu khá bận nên thời gian rảnh rất ít. Do đó Hiếu đã chọn thăm khám nam khoa tại Chuyên khoa An Đông qua Đặt hẹn Online. Đội ngũ nhân viên phòng khám rất dễ thương, thân thiện và nhẹ nhàng trong tiếp đón. Các Y – Bác ai cũng nhiệt tình, chu đáo và tận tâm. Hiếu cảm thấy rất may mắn và hài lòng khi mình đã tin chọn phòng khám Chuyên khoa An Đông.”
+                                “Công việc của Hiếu khá bận nên thời gian rảnh rất ít. Do đó Hiếu đã chọn thăm khám ngoại khoa tại Chuyên khoa An Đông qua Đặt hẹn Online. Đội ngũ nhân viên phòng khám rất dễ thương, thân thiện và nhẹ nhàng trong tiếp đón. Các Y – Bác ai cũng nhiệt tình, chu đáo và tận tâm. Hiếu cảm thấy rất may mắn và hài lòng khi mình đã tin chọn phòng khám Chuyên khoa An Đông.”
                             </div>
                         </div>
                         <div class="client__container-item ">
@@ -155,7 +155,7 @@
                                 <hr>
                             </div>
                             <div class="client__container-item-text">
-                                “Hải mới có chuyến công tác ở Sài Gòn nên tranh thủ cùng bạn đi làm xét nghiệm Bệnh xã hội tại Phòng khám Chuyên khoa An Đông.
+                                “Hải mới có chuyến công tác ở Sài Gòn nên tranh thủ cùng bạn đi làm xét nghiệm bệnh da liễu tại Phòng khám Chuyên khoa An Đông.
                                 Theo Hải thì chất lượng phòng khám là khỏi chê, đội ngũ nhân viên y, bác sĩ rất thân thiện và nhiệt tình. Thời gian trả kết quả cũng rất nhanh, cái chính là an toàn và bảo mật.
                                 Đây là điều mà Hải cảm thấy hài lòng nhất, xin cám ơn Chuyên khoa An Đông!”
                             </div>

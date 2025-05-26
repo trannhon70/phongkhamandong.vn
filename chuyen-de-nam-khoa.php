@@ -14,7 +14,7 @@ $local = '/phongkhamandong.vn';
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <meta name="description"
-        content="Phòng khám Chuyên khoa chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
+        content="Phòng khám Chuyên khoa chuyên điều trị bệnh ngoại khoa, bệnh da liễu, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
     <title>Phòng khám Chuyên khoa</title>
     <link rel="preload" fetchpriority="high" as="image" href="<?php echo $local ?>/images/banner/banner.webp" type="image/webp">
 
@@ -134,7 +134,7 @@ $slides = [
 
     <session class="expert">
         <h2 class="expert__title">
-            KHI NÀO NAM GIỚI CẦN ĐI KHÁM NAM KHOA
+            KHI NÀO NAM GIỚI CẦN ĐI KHÁM NGOẠI KHOA
         </h2>
         <div class="expert__text">
             Khi gặp vấn đề về chức năng tình dục
@@ -230,7 +230,7 @@ $slides = [
         </section>
         <section class="expert">
             <h2 class="expert__title">
-                BS. Cao Hữu Minh - Phòng Khám Nam Khoa Uy Tín Tại TPHCM
+                BS. Cao Hữu Minh - Phòng Khám ngoại khoa Uy Tín Tại TPHCM
             </h2>
         </section>
 
@@ -241,7 +241,7 @@ $slides = [
             GIỚI THIỆU THÔNG TIN BÁC SĨ
         </div> -->
             <div class="expert__content">
-                Đi thăm khám Nam khoa hiệu quả và an toàn bắt buộc cần có bác sĩ trình độ cao,
+                Đi thăm khám ngoại khoa hiệu quả và an toàn bắt buộc cần có bác sĩ trình độ cao,
                 chuyên môn tốt và nhiều kinh nghiệm thăm khám.
             </div>
             <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/banner/bac_si_1.webp" alt="...">
@@ -257,7 +257,7 @@ $slides = [
         </section>
         <section class="expert expert_ul">
             <ul>
-                <li><strong>+ </strong> 20 năm kinh nghiệm khám chữa bệnh Ngoại khoa tổng quát và Nam khoa</li>
+                <li><strong>+ </strong> 20 năm kinh nghiệm khám chữa bệnh Ngoại khoa tổng quát và ngoại khoa</li>
                 <li><strong>+ </strong> Từng công tác tại Bệnh viện Quân Y 16, Bệnh viện Quân Y 103, Viện Y Học Cổ Truyền</li>
                 <li><strong>+ </strong> Từng giữ chức vụ Phó giám đốc Bệnh viện Quận Y 16 trực thuộc Bộ Quốc Phòng</li>
             </ul>
@@ -271,7 +271,7 @@ $slides = [
                     <li>- Sinh sản nam</li>
                     <li>- Bệnh ngoại tiết niệu</li>
                     <li>- Rối lọa tiết tố nam</li>
-                    <li>- Cấp cưu nam khoa</li>
+                    <li>- Cấp cưu ngoại khoa</li>
                 </ul>
             </div>
         </section>
@@ -280,7 +280,7 @@ $slides = [
 
                 <ul>
                     <li class="treatment__namkhoa-title">ĐIỀU TRỊ CHUYÊN KHOA</li>
-                    <li class="treatment__namkhoa-titleN">+ bệnh nam khoa</li>
+                    <li class="treatment__namkhoa-titleN">+ bệnh ngoại khoa</li>
                     <li><a aria-label="1" href="">1. Bệnh bao quy đầu</a></li>
                     <li><a aria-label="1" href="">2. Rối loạn xuất tinh</a></li>
                     <li><a aria-label="1" href="">3. Bệnh tinh hoàn</a></li>
@@ -290,7 +290,7 @@ $slides = [
                     <li><a aria-label="1" href="">7. Rối loạn chức năng sinh dục</a></li>
                     <li><a aria-label="1" href="">8. Bệnh dương vật</a></li>
 
-                    <li class="treatment__namkhoa-titleN">+ bệnh xã hội</li>
+                    <li class="treatment__namkhoa-titleN">+ bệnh da liễu</li>
                     <li><a aria-label="1" href="">1. Sùi màu gà</a></li>
                     <li><a aria-label="1" href="">2. Bệnh lậu</a></li>
                     <li><a aria-label="1" href="">3. Giang mai</a></li>
@@ -327,7 +327,7 @@ $slides = [
 
         <section class="treatment">
             <div class="treatment__title">
-                CÁC BỆNH NAM KHOA THƯỜNG GẶP
+                CÁC BỆNH NGOẠI KHOA THƯỜNG GẶP
             </div>
 
         </section>

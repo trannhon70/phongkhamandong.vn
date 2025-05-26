@@ -14,7 +14,7 @@ $local = 'https://phongkhamandong.vn';
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <meta name="description"
-        content="Phòng khám Chuyên khoa chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
+        content="Phòng khám Chuyên khoa chuyên điều trị bệnh ngoại khoa, bệnh da liễu, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
     <title>Phòng khám Chuyên khoa</title>
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.webp" type="image/x-icon">
     <link rel="preload" href="css/index.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
@@ -81,7 +81,7 @@ $slides = [
 <body>
     <header class="header">
         <h1 class="header__title">
-            CHUYÊN KHOA BỆNH XÃ HỘI UY TÍN TẠI TP.HCM
+            CHUYÊN KHOA BỆNH DA LIỄU UY TÍN TẠI TP.HCM
         </h1>
     </header>
 
@@ -103,7 +103,7 @@ $slides = [
     <section class="sick">
         <div class="sick__body ">
             <div class="sick__body-card">
-                <strong>Bệnh sùi mào gà</strong> là căn bệnh xã hội, lây lan qua hành vi quan hệ tình dục, bản chất là tình trạng tăng sinh của các tế bào biểu bì do lây nhiễm virus HPV (Human Papilloma Virus). Virus HPV bao gồm các tuýp 1, 2, 6, 11, 16, 18, 31, 33, và 35. Trong đó, bệnh ung thư cổ tử cung ở nữ giới có liên quan tới việc nhiễm HPV tuýp 16 và 18 trong thời gian dài. HPV là một phân tử khá nhỏ với đường kính = 55 nm, thuộc nhóm DNA. Có hơn 100 kiểu gen HPV, trong đó hơn 30 kiểu sẽ lây nhiễm và gây bệnh trên da và niêm mạc của bộ phận sinh dục, và gây ra các loại bệnh. Do bệnh có khả năng lây lan mạnh nên cần nhận biết triệu chứng để điều trị kịp thời.
+                <strong>Bệnh sùi mào gà</strong> là căn bệnh da liễu, lây lan qua hành vi quan hệ tình dục, bản chất là tình trạng tăng sinh của các tế bào biểu bì do lây nhiễm virus HPV (Human Papilloma Virus). Virus HPV bao gồm các tuýp 1, 2, 6, 11, 16, 18, 31, 33, và 35. Trong đó, bệnh ung thư cổ tử cung ở nữ giới có liên quan tới việc nhiễm HPV tuýp 16 và 18 trong thời gian dài. HPV là một phân tử khá nhỏ với đường kính = 55 nm, thuộc nhóm DNA. Có hơn 100 kiểu gen HPV, trong đó hơn 30 kiểu sẽ lây nhiễm và gây bệnh trên da và niêm mạc của bộ phận sinh dục, và gây ra các loại bệnh. Do bệnh có khả năng lây lan mạnh nên cần nhận biết triệu chứng để điều trị kịp thời.
             </div>
         </div>
     </section>
