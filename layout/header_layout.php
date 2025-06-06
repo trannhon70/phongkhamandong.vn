@@ -37,16 +37,16 @@
                         <nav class="header__body-drop">
                             <ul>
                                 <li>
-                                    <a href="<?php echo $local ?>">Ngoại khoa</a>
+                                    <a href="<?php echo $local ?>/ngoai-khoa-21.html">Ngoại khoa</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $local ?>">da liễu</a>
+                                    <a href="<?php echo $local ?>/da-lieu-291.html">da liễu</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $local ?>">xét nghiệm</a>
+                                    <a href="<?php echo $local ?>/xet-nghiem-293.html">xét nghiệm</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $local ?>">chuẩn đoán hình ảnh</a>
+                                    <a href="<?php echo $local ?>/chan-doan-hinh-anh-294.html">chuẩn đoán hình ảnh</a>
                                 </li>
 
                             </ul>
