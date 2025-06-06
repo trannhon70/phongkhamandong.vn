@@ -1,185 +1,354 @@
-<?php include "inc/header.php" ?>
-<link rel="stylesheet" href="<?php echo $local ?>/css/trang-chu.min.css">
+<?php include_once "inc/header.php" ?>
+<meta name="description"
+        content="Phòng khám chuyên điều trị bệnh uy tính tại thành phố Hồ Chí Minh">
+    <title>Phòng khám chuyên khoa</title>
+<link rel="stylesheet" href="css/trang_chu.min.css">
 </head>
-
 <body>
-    <?php include_once 'layout/headerLayout.php' ?>
-     <main>
+    <?php include "layout/header_layout.php" ?>
+    <main>
         <article>
-            <?php include "layout/sliderLayout.php" ?>
-            
-             <div class="checkSendPhoneMobile"  style="margin-top: 170px;" ></div>
-            <section id="menu_logo_mobile" >
-                <?php include 'layout/menu_logo.php' ?> 
-            </section>
-            
-
-          <section class="motto" id="motto">
-                <div class="motto__container">
-                    <div class="motto__container-left">
-                        <div class="motto__container-left-top">
-                            <div class="motto__container-left-top-img">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_pen.webp" height="60px" width="50px" alt="..."></amp-img>
-                            </div>
-                            <div class="motto__container-left-top-title">
-                                PHƯƠNG CHÂM CỦA CHÚNG TÔI
-                            </div>
-                        </div>
-                        <div class="motto__container-left-boddy" >
-                        <div class="motto__container-left-text">
-                          
-                            Phòng khám Chuyên khoa An Đông là cơ sở y tế uy tín tại TP.HCM. Cung cấp dịch vụ y tế chất lượng và tận tâm. Phòng khám chuyên về các chuyên khoa: ngoại khoa, da liễu, với đội ngũ y bác sĩ giàu kinh nghiệm, luôn sẵn sàng chăm sóc và hỗ trợ điều trị cho người bệnh.
-                        </div>
-                        </div>
-                    </div>
-                    <div class="motto__container-right">
-                        <img class="motto__container-right-img" src="<?php echo $local ?>/images/users/phuong_cham.webp" alt="...">
-                        <img width="100%" class="motto__container-right-img-mobile"  src="<?php echo $local ?>/images/users/khong_gian1.webp" alt="...">
-                    </div>
+            <div id="vision" class="vision">
+                <div class="vision__left">
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_bacsi.webp" alt="bác sĩ nữ">
                 </div>
-            </section>
-
-             <section class="advantage" id="advantage">
-                <div class="advantage__container">
-                    <div class="advantage__container-left">
-                        <img class="advantage__container-left-img" src="<?php echo $local ?>/images/users/u_the.webp" alt="...">
-                    </div>
-                    <div class="advantage__container-right">
-                        <div class="advantage__container-right-top">
-                            <div class="advantage__container-right-top-img">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check.webp" height="60px" width="60px" alt="..."></amp-img>
-                            </div>
-                            <div class="advantage__container-right-top-title">
-                                ƯU THẾ VƯỢT TRỘI
-                            </div>
+                <div class="vision__right">
+                    <div class="vision__right-top">
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_chat.webp" alt="chat top">
+                        <div class="vision__right-top-body">
+                            <strong>TẦM NHÌN</strong>
+                            <div>  Chuyên khoa An Đông đã được thành lập và định hướng phát triển theo tiêu chuẩn y khoa, tiện ích và nhân văn. Từ đó, trở thành điểm đến tin cậy của nhiều bệnh nhân tại thành phố cũng như các tỉnh lân cận.  </div>
                         </div>
-                        <div class="advantage__container-right-bottom">
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>Đội ngũ bác sĩ chuyên môn cao</h5>
+                    </div>
+                    <div class="vision__right-bottom">
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_chat1.webp" alt="chat top">
+                        <div class="vision__right-bottom-body">
+                            <strong>SỨ MỆNH</strong>
+                            <div>   Sứ mệnh vì một cộng đồng mạnh khỏe, vui sống và an nhiên. Chuyên khoa An Đông luôn nỗ lực để xây dựng một thương hiệu chăm sóc sức khỏe với hàm lượng tri thức, khoa học và công nghệ hiện đại. Mỗi dịch vụ y tế đều hướng tới tính tiện ích, hiệu quả và có ý nghĩa trong cuộc sống con người. </div>
+                            <div class="vision__right-bottom-body-img">
+                                <img src="<?php echo $local ?>/images/icons/icon_heat.webp" alt="...">
                             </div>
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>môi trường thân thiện, dịch vụ tận tâm, chu đáo</h5>
-                            </div>
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>hệ thống máy móc hiện đại</h5>
-                            </div>
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>chi phí khám hỗ trợ điều trị bệnh hợp lý</h5>
-                            </div>
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>thủ tục nhanh gọn, không rườm rà</h5>
-                            </div>
-                            <div class="advantage__container-right-bottom-item">
-                                <amp-img class="header__bottom-logo-img" src="<?php echo $local ?>/images/icons/icon_check1.webp" height="25px" width="25px" alt="..."></amp-img>
-                                <h5>môi trường thân thiện</h5>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-            </section>
-
-           <?php include_once 'layout/benefitLayout.php' ?>
-
-            <section class="space" id="space">
-                <div class="space__title">
-                    <div>KHÔNG GIAN PHÒNG KHÁM</div>
+            </div>
+            <div id="vision__mobile" class="vision__mobile" >
+                <div class="vision__mobile-body" >
+                    <div class="vision__mobile-body-title">Tầm Nhìn & Sứ mệnh</div>
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                    <p>Chuyên khoa An Đông – 360, An Dương Vương, P.4, Q.5, TPHCM đã được thành lập và định hướng phát triển theo tiêu chuẩn y khoa quốc tế, tiện ích và nhân văn. Từ đó, trở thành điểm đến tin cậy của nhiều bệnh nhân tại thành phố cũng như các tỉnh lân cận.
+                    Sứ mệnh vì một cộng đồng mạnh khỏe, vui sống và an nhiên. Chuyên khoa An Đông luôn nỗ lực để xây dựng một thương hiệu chăm sóc sức khỏe với hàm lượng tri thức, khoa học và công nghệ hiện đại. Mỗi dịch vụ y tế đều hướng tới tính tiện ích, hiệu quả và có ý nghĩa trong cuộc sống con người.</p>
                 </div>
-                <div class="space__container">
-                    <div class="space__container-left">
-                        <img src="<?php echo $local ?>/images/users/khong_gian1.webp" alt="...">
-                    </div>
-
-                    <div class="space__container-right">
-                        <div class="space__container-right-img space__container-right-img-mobile">
-                            <img src="<?php echo $local ?>/images/users/khong_gian2.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img">
-                            <img src="<?php echo $local ?>/images/users/khong_gian3.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img">
-                            <img src="<?php echo $local ?>/images/users/khong_gian4.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img">
-                            <img src="<?php echo $local ?>/images/users/khong_gian5.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img">
-                            <img src="<?php echo $local ?>/images/users/khong_gian6.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img space__container-right-img-mobile">
-                            <img src="<?php echo $local ?>/images/users/khong_gian7.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img space__container-right-img-mobile">
-                            <img src="<?php echo $local ?>/images/users/khong_gian8.webp" alt="...">
-                        </div>
-                        <div class="space__container-right-img space__container-right-img-mobile">
-                            <img src="<?php echo $local ?>/images/users/khong_gian9.webp" alt="...">
-                        </div>
+                <img  width="100%" height="auto" src="<?php echo $local ?>/images/banner/banner-small.webp" alt="...">
+            </div>
+            <div class="team">
+                <div class="team__container" >
+                <div class="team__tile">
+                    <div>- đội ngũ bác sĩ-</div>
+                    <strong>chuyên gia giàu kinh nghiệm</strong>
+                    <div>
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
                     </div>
                 </div>
-            </section>
-
-             <section class="client" id="client">
-                <div class="client__container">
-                    <div class="client__container-title">KHÁCH HÀNG NÓI GÌ?</div>
-                    <div class="client__container-list">
-                        <div class="client__container-item ">
-                            <amp-img class="client__container-item-img" src="<?php echo $local ?>/images/users/user_kimOanh.webp" height="100px" width="100px" alt="..."></amp-img>
-                            <div class="client__container-item-name">CHỊ KIM OANH</div>
-                            <div class="client__container-item-div">
-                                <hr>
-                            </div>
-                            <div class="client__container-item-text">
-                                “Mình bị viêm da cũng khá nặng, đã chữa trị nhiều nơi nhưng không khỏi. Mình biết đến Phòng khám Chuyên khoa An Đông qua một người bạn. Khi mình đến khám, bác sĩ và nhân viên phòng khám hướng dẫn mình rất chi tiết trong từng hạng mục.”
-                            </div>
-                        </div>
-                        <div class="client__container-item activeClient">
-                            <amp-img class="client__container-item-img" src="<?php echo $local ?>/images/users/user_trunghieu.webp" height="100px" width="100px" alt="..."></amp-img>
-                            <div class="client__container-item-name">ANH TRUNG HIÊU</div>
-                            <div class="client__container-item-div">
-                                <hr>
-                            </div>
-                            <div class="client__container-item-text">
-                                “Công việc của Hiếu khá bận nên thời gian rảnh rất ít. Do đó Hiếu đã chọn thăm khám ngoại khoa tại Chuyên khoa An Đông qua Đặt hẹn Online. Đội ngũ nhân viên phòng khám rất dễ thương, thân thiện và nhẹ nhàng trong tiếp đón. Các Y – Bác ai cũng nhiệt tình, chu đáo và tận tâm. Hiếu cảm thấy rất may mắn và hài lòng khi mình đã tin chọn phòng khám Chuyên khoa An Đông.”
-                            </div>
-                        </div>
-                        <div class="client__container-item ">
-                            <amp-img class="client__container-item-img" src="<?php echo $local ?>/images/users/user_minhHai.webp" height="100px" width="100px" alt="..."></amp-img>
-                            <div class="client__container-item-name">ANH TRUNG HIÊU</div>
-                            <div class="client__container-item-div">
-                                <hr>
-                            </div>
-                            <div class="client__container-item-text">
-                                “Hải mới có chuyến công tác ở Sài Gòn nên tranh thủ cùng bạn đi làm xét nghiệm bệnh da liễu tại Phòng khám Chuyên khoa An Đông.
-                                Theo Hải thì chất lượng phòng khám là khỏi chê, đội ngũ nhân viên y, bác sĩ rất thân thiện và nhiệt tình. Thời gian trả kết quả cũng rất nhanh, cái chính là an toàn và bảo mật.
-                                Đây là điều mà Hải cảm thấy hài lòng nhất, xin cám ơn Chuyên khoa An Đông!”
-                            </div>
-                        </div>
-                    </div>
-                    <div class="index-client">
-                        <div class="client-item client-item-0 activeClient"></div>
-                        <div class="client-item client-item-1"></div>
-                        <div class="client-item client-item-2"></div>
+                <div class="team__body">
+                    <!-- <div class="team__body-item">
+                        <div class="team__body-item-tile">BS. cao hữu minh</div>
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_bacsiminh.webp" alt="...">
+                    </div> -->
+                    <div class="team__body-item">
+                        <div class="team__body-item-tile">BS. Võ minh nguyễn</div>
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_bacsinguyen.webp" alt="...">
                     </div>
                 </div>
-            </section>
-
-            <section class="licensepk" >
-                <div class="licensepk_container" >
-                    <div class="licensepk_container-item" >
-                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/da_lieu.webp" alt="...">
+                </div>
+            </div>
+             <div id="facilities" class="facilities">
+                <div class="facilities__body">
+                    <div class="facilities__line">
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
                     </div>
-                    <div class="licensepk_container-item" >
-                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/giay_phep_phong_kham.webp" alt="...">
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/background/csvc.webp" alt="cơ sở vật chất">
+                </div>
+                
+            </div>
+            <div id="facilities__mobile" class="facilities__mobile" >
+                 <div class="vision__mobile-body" >
+                    <div class="vision__mobile-body-title">Cơ sở vật chất</div>
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                </div>
+                <div class="facilities__mobile-list" >
+                    <div class="facilities__mobile-list-item" >
+                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/coso1.webp" alt="...">
+                    </div>
+                    <div class="facilities__mobile-list-item" >
+                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/coso2.webp" alt="...">
+                    </div>
+                    <div class="facilities__mobile-list-item" >
+                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/coso3.webp" alt="...">
+                    </div>
+                    <div class="facilities__mobile-list-item" >
+                        <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/coso4.webp" alt="...">
                     </div>
                 </div>
-            </section>
+            </div>  
+             <div class="equipment">
+                <div class="equipment__body" >
+
+                
+                <div class="team__tile">
+                    <div>- hệ thống trang thiết bị-</div>
+                    <strong>tân tiến hiện đại</strong>
+                    <div>
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                    </div>
+                </div>
+                <div class="equipment__carousel">
+                    <div class="equipment__carousel-prev">
+                        <img width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_prev.webp" alt="icon prev">
+                    </div>
+                    <div class="equipment__carousel-list">
+                        <img class="equipment__carousel-list-bg" width="100%" height="auto" src="<?php echo $local ?>/images/background/bg_xoay.webp" alt="...">
+                        <div class="equipment__carousel-list-item equipment__carousel-list-item-active">
+                            <div class="flip-box">
+                                <img class="front" src="<?php echo $local ?>/images/background/may_ala.webp" alt="..." width="70%">
+                                <div class="back">
+                                    <div class="equipment__carousel-list-item-body">
+                                        <strong>Máy ALA-PDT</strong>
+                                        <div>
+                                            <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                                        </div>
+                                        <p>
+                                            Phương pháp hỗ trợ điều trị bệnh sùi mào gà hiện đại, mang lại hiệu quả tích cực.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__carousel-list-item">
+                            <div class="flip-box">
+                                <img class="front" src="<?php echo $local ?>/images/background/may_surkon.webp" alt="..." width="70%">
+                                <div class="back">
+                                    <div class="equipment__carousel-list-item-body">
+                                        <strong>Máy SURKON</strong>
+                                        <div>
+                                            <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                                        </div>
+                                        <p>
+                                            Công nghệ cắt bao quy đầu thẩm mỹ, an toàn và ít đau.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipment__carousel-next">
+                        <img width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_next.webp" alt="icon next">
+                    </div>
+
+                </div>
+                </div>
+            </div>
+           <div class="process">
+                <div class="process__title">
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_tieude.webp" alt="...">
+                </div>
+                <div class="process__row">
+                    <div class="process__row-item">
+                        <strong>TƯ VẤN SỨC KHỎE</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_1.webp" alt="....">
+                        </div>
+                    </div>
+                    <div class="process__row-item">
+                        <strong>ĐẶT HẸN ONLINE</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_2.webp" alt="....">
+                        </div>
+                    </div>
+                    <div class="process__row-item">
+                        <strong>KHÁM LÂM SÀN</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_3.webp" alt="....">
+                        </div>
+                    </div>
+                    <div class="process__row-item">
+                        <strong>TIẾN HÀNH XÉT NGHIỆM</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_4.webp" alt="....">
+                        </div>
+                    </div>
+                    <div class="process__row-item">
+                        <strong>CHUẨN ĐOÁN & ĐIỀU TRỊ</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_5.webp" alt="....">
+                        </div>
+                    </div>
+                    <div class="process__row-item">
+                        <strong>TÁI KHÁM & THEO DÕI</strong>
+                        <div>
+                            <img width="170px" height="170px" src="<?php echo $local ?>/images/icons/icon_6.webp" alt="....">
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="process__row-img ">
+                    <img width="350px" height="350px" src="<?php echo $local ?>/images/icons/icon_khien.webp" alt="...">
+                </div>
+            </div>
+            <div class="customer ">
+                <div class="team__tile">
+                    <div>-đôi lời chia sẽ-</div>
+                    <strong>cảm nhận của khách hàng</strong>
+                    <div>
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                    </div>
+                </div>
+                <div class="customer_row">
+                    <div class="customer_row-left">
+                        <p>
+                        Đối với An Đông 360, tất cả bệnh nhân đều là người thân. Do đó, khi gặp các vấn đề về sức khỏe, An Đông sẽ luôn ở đây và sẵn lòng hỗ trợ bạn bằng một quy trình chuyên nghiệp, hiệu quả, tiết kiệm thời gian cũng như chi phí.
+                        </p>
+                    </div>
+                    <div class="customer_row-right">
+                        <div class="customer__carousel">
+                            <div class="customer_row-right-list customer_row-right-list-active">
+                                <div class="customer_row-right-list-item ">
+                                    <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_1.webp" alt="...">
+                                    <div class="customer_row-right-list-item-body">
+                                        <p> “Tuần trước mình có đến đây cắt bao quy đầu. Các bác sĩ tư vấn rất nhiệt tình, có tâm, tay nghề giỏi, làm rất êm và kỹ lưỡng, mình thấy giá cũng hợp lý. Bên đây cũng có khám sức khỏe định kỳ nữa nên tháng sau mình sẽ đưa gia đình đến khám.”</p>
+                                        <div>Mạnh Nam (25 tuổi)</div>
+                                    </div>
+                                </div>
+                                <div  class="customer_row-right-list-item ">
+                                    <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_2.webp" alt="...">
+                                    <div class="customer_row-right-list-item-body">
+                                        <p> “Tôi rất hài lòng với dịch vụ tại phòng khám. Các bác sĩ rất tận tình, giải thích rõ ràng về bệnh tình và phương pháp điều trị. Không gian khám bệnh sạch sẽ, thoải mái, giúp tôi cảm thấy yên tâm hơn.”</p>
+                                        <div>Anh Tú (31 tuổi)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer_row-right-list ">
+                                <div class="customer_row-right-list-item ">
+                                    <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_3.webp" alt="...">
+                                    <div class="customer_row-right-list-item-body">
+                                        <p>“Mình được bạn bè giới thiệu đến Chuyên khoa An Đông. Tại đây, các bác sĩ vô cùng có tâm với nghề, nên mình cũng thoải mái chia sẻ những vấn đề mình đang gặp phải. Sau điều trị, mình cảm thấy sức khỏe cải thiện hơn”</p>
+                                        <div>Đức Trí (29 tuổi)</div>
+                                    </div>
+                                </div>
+                                <div  class="customer_row-right-list-item ">
+                                    <img width="100%" height="auto" src="<?php echo $local ?>/images/users/user_4.webp" alt="...">
+                                    <div class="customer_row-right-list-item-body">
+                                        <p>“Mình đã từng điều trị tại đây và cũng đã giới thiệu cho nhiều bạn bè. Không gian phòng khám rộng rãi, thủ tục đơn giản, chi phí hợp lý không hề bị chặt chém, nhân viên y tế chu đáo, nhiệt tình…”</p>
+                                        <div>Minh Tuấn (22 tuổi)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_pagi">
+                            <div class="customer_pagi-item customer_pagi-item-active"></div>
+                            <div class="customer_pagi-item"></div>
+                        </div>
+
+                    </div> 
+                </div>
+            </div> 
+
         </article>
     </main>
-    
-     <?php include_once 'inc/footer.php' ?>
+
+     <script>
+        const customerlist = document.querySelector('.customer__carousel');
+        const itemsCus = document.querySelectorAll('.customer_row-right-list')
+        const pagiItems = document.querySelectorAll('.customer_pagi-item');
+        let current = 0
+
+        function changeSlide(index) {
+            itemsCus[current].classList.remove('customer_row-right-list-active');
+            pagiItems[current].classList.remove('customer_pagi-item-active');
+
+            current = index;
+
+            itemsCus[current].classList.add('customer_row-right-list-active');
+            pagiItems[current].classList.add('customer_pagi-item-active');
+        }
+
+        // Gắn sự kiện click cho các nút phân trang
+        pagiItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                changeSlide(index);
+            });
+        });
+
+        // Khởi động với slide đầu tiên
+        changeSlide(0);
+
+        setInterval(() => {
+            let nextIndex = (current + 1) % itemsCus.length;
+            changeSlide(nextIndex);
+        }, 5000);
+    </script>
+
+ <script>
+        const carouselList = document.querySelector('.equipment__carousel-list');
+        const items = document.querySelectorAll('.equipment__carousel-list-item');
+        const nextButton = document.querySelector('.equipment__carousel-next');
+        const prevButton = document.querySelector('.equipment__carousel-prev');
+
+        let currentIndex = 0; // Theo dõi vị trí hiện tại
+        let autoSlideInterval; // Biến lưu trữ setInterval
+
+        // Hàm di chuyển đến item tiếp theo
+        function nextSlide() {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Quay lại item đầu tiên
+            }
+            updateCarousel();
+        }
+
+        // Hàm di chuyển đến item trước đó
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = items.length - 1; // Quay lại item cuối cùng
+            }
+            updateCarousel();
+        }
+
+        // Cập nhật vị trí của carousel
+        function updateCarousel() {
+            // Loại bỏ class 'equipment__carousel-list-item-active' khỏi tất cả các item
+            items.forEach(item => item.classList.remove('equipment__carousel-list-item-active'));
+            // Thêm class 'equipment__carousel-list-item-active' vào item hiện tại
+            items[currentIndex].classList.add('equipment__carousel-list-item-active');
+        }
+
+        // Bắt đầu tự động chuyển slide
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, 3000);
+        }
+
+        // Dừng tự động chuyển slide
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Gắn sự kiện hover vào carousel để dừng và chạy lại slide
+        carouselList.addEventListener('mouseover', stopAutoSlide); // Dừng khi hover
+        carouselList.addEventListener('mouseout', startAutoSlide); // Tiếp tục khi rời chuột
+
+        // Gắn sự kiện cho các nút
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        // Khởi chạy carousel khi DOM đã tải
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCarousel();
+            startAutoSlide(); // Bắt đầu tự động slide khi trang tải xong
+        });
+    </script>
+    <?php include_once "inc/footer.php" ?>

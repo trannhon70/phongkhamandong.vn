@@ -19,7 +19,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data)) {
     // Xử lý và chuẩn bị dữ liệu
     $hoten = isset($data['hoten']) ? htmlspecialchars(strip_tags($data['hoten'])) : '';
-    
+    $ngaysinh = isset($data['ngaysinh']) ? htmlspecialchars(strip_tags($data['ngaysinh'])) : '';
     $sdt = isset($data['sdt']) ? htmlspecialchars(strip_tags($data['sdt'])) : '';
     $trieuchung = isset($data['trieuchung']) ? htmlspecialchars(strip_tags($data['trieuchung'])) : '';
     $ngaykham = isset($data['ngaykham']) ? htmlspecialchars(strip_tags($data['ngaykham'])) : '';
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data)) {
 
     $created_at = $fm->created_at();
     $formatted_date = date('Y-m-d', strtotime($created_at));
-    if (!empty($sdt)  && !empty($hoten) && !empty($trieuchung) && !empty($ngaykham) && !empty($giokham)) {
+    if (!empty($sdt) && !empty($ngaysinh) && !empty($hoten) && !empty($trieuchung) && !empty($ngaykham) && !empty($giokham)) {
         $check_created = "SELECT * FROM `admin_khachhang` WHERE sdt = '$sdt' AND DATE(created_at) = '$formatted_date'";
         $check_result = $db->select($check_created);
         if ($check_result && $check_result->num_rows > 0) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data)) {
         } else {
             
             $sql = "INSERT INTO admin_khachhang (hoten, ngaysinh, sdt, trieuchung,ngaykham,giokham, status, note, ketqua, nguon, user_tuvan, created_at,form) 
-                VALUES ('$hoten', '', '$sdt', '$trieuchung','$ngaykham_formatted','$giokham', 0, '', 0, '$nguon', 0, '$created_at', 'đặt lịch khám')";
+                VALUES ('$hoten', '$ngaysinh', '$sdt', '$trieuchung','$ngaykham_formatted','$giokham', 0, '', 0, '$nguon', 0, '$created_at', 'đặt lịch khám')";
 
             $result = $db->insert($sql);
 

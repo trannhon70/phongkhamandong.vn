@@ -19,32 +19,12 @@ class post
     $this->fm = new Format();
   }
 
-  public function getBaiViet_bySlug($slug)
-  {
-    $slug = mysqli_real_escape_string($this->db->link, $slug);
-    $query = "SELECT baiviet.*, 
-    benh.name AS name_benh, 
-    benh.id_khoa AS id_khoa, 
-    khoa.name AS name_khoa 
-    FROM admin_baiviet baiviet 
-    JOIN admin_benh benh ON baiviet.id_benh = benh.id 
-    JOIN admin_khoa khoa ON khoa.id = benh.id_khoa 
-    WHERE baiviet.slug = '$slug' 
-    LIMIT 1";
-    $result = $this->db->select($query);
-    if ($result) {
-      return $result->fetch_assoc();
-    } else {
-      return null;
-    }
-  }
-
-  // insert post
+  //thêm danh mục 
   public function insert_post($data, $files)
   {
     // Lấy dữ liệu từ biểu mẫu và bảo vệ chống SQL injection
     $tieu_de = mysqli_real_escape_string($this->db->link, $data['tieu_de']);
-    $id_benh = isset($data['id_benh']) ? mysqli_real_escape_string($this->db->link, $data['id_benh']) : '';
+    $id_benh = mysqli_real_escape_string($this->db->link, $data['id_benh']);
     $id_khoa = mysqli_real_escape_string($this->db->link, $data['id_khoa']);
     $content = mysqli_real_escape_string($this->db->link, $data['content']);
     $title = mysqli_real_escape_string($this->db->link, $data['title']);
@@ -75,9 +55,9 @@ class post
     $slug .= '-' . ($latest_id);
 
     // Thực hiện truy vấn nếu các trường không rỗng
-    if ($tieu_de !== '' && $id_khoa !=='' && $content !== '' && $title !== '' && $keyword !=='' && $description !=='' && $id_benh !=='' ) {
-      $query = "INSERT INTO admin_baiviet (title, slug, content, id_benh, id_khoa, created_at, tieu_de, keyword, descriptions, user_id, img)
-                  VALUES ('$title', '$slug', '$content', '$id_benh', '$id_khoa', '$created_at', '$tieu_de', '$keyword', '$description', '" . Session::get('id') . "', '$img')";
+    if ($tieu_de && $id_benh && $content) {
+      $query = "INSERT INTO admin_baiviet (title, slug, content, id_benh, id_khoa, created_at, tieu_de, keyword, descriptions, user_id, img,view)
+                  VALUES ('$title', '$slug', '$content', '$id_benh', '$id_khoa', '$created_at', '$tieu_de', '$keyword', '$description', '" . Session::get('id') . "', '$img', '0')";
       $result = $this->db->insert($query);
 
       return $result
@@ -85,64 +65,18 @@ class post
         : ['status' => 'error', 'message' => 'Thêm bài viết thất bại!'];
     }
 
-    return ['status' => 'error', 'message' => 'Tất cả các trường không được bổ trống!'];
+    return ['status' => 'error', 'message' => 'Các trường tiêu đề, chọn bênh, nội dung không được bổ trống!'];
   }
 
-
-  public function getPaginationTinTuc($limit, $offset, $tieuDe, $IdBenh)
+  public function getAll()
   {
-    $tieuDe = mysqli_real_escape_string($this->db->link, $tieuDe);
-    $IdBenh = mysqli_real_escape_string($this->db->link, $IdBenh);
-
-    if ($tieuDe !== '' || $IdBenh !== '') {
-      $query = "SELECT baiviet.*, user.user_name, user.email , 
-      user.full_name,
-      benh.name AS ten_benh,
-        benh.id_khoa AS id_benh_khoa, 
-        khoa.slug AS slug_khoa 
+    $query = "SELECT baiviet.*, user.user_name, user.email , user.full_name, benh.name AS ten_benh
         FROM admin_baiviet baiviet 
         JOIN admin_user user ON baiviet.user_id = user.id
         JOIN admin_benh benh ON baiviet.id_benh = benh.id
-       JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
-       WHERE baiviet.tieu_de LIKE '%$tieuDe%' ";
-
-      if (!empty($IdBenh)) {
-        $query .= " AND benh.id = '$IdBenh'";
-      }
-      $query .= " ORDER BY baiviet.id DESC LIMIT $limit OFFSET $offset";
-    } else {
-      $query = "SELECT baiviet.*, user.user_name, user.email , 
-      user.full_name,
-      benh.name AS ten_benh,
-        benh.id_khoa AS id_benh_khoa, 
-        khoa.slug AS slug_khoa 
-        FROM admin_baiviet baiviet 
-        JOIN admin_user user ON baiviet.user_id = user.id
-        JOIN admin_benh benh ON baiviet.id_benh = benh.id
-       JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
-     
-        ORDER BY baiviet.id DESC LIMIT $limit OFFSET $offset";
-    }
-
+        ORDER BY baiviet.created_at DESC";
     $result = $this->db->select($query);
     return $result;
-  }
-
-  public function getTotalCount($tieuDe,$IdBenh)
-  {
-    $tieuDe = mysqli_real_escape_string($this->db->link, $tieuDe);
-    if ($tieuDe !== '' || $IdBenh !== '') {
-      $query = "SELECT COUNT(*) AS total FROM admin_baiviet WHERE tieu_de LIKE '%$tieuDe%' ";
-      if (!empty($IdBenh)) {
-        $query .= " AND id_benh = '$IdBenh'";
-      }
-    } else {
-      $query = "SELECT COUNT(*) AS total FROM admin_baiviet ";
-    }
-
-    $result = $this->db->select($query);
-    $row = $result->fetch_assoc();
-    return $row['total'];
   }
 
   public function delete_baiviet($id)
@@ -162,6 +96,59 @@ class post
     $query = "SELECT * FROM admin_baiviet WHERE id = '$id' LIMIT 1";
     $result = $this->db->select($query);
     return $result->fetch_assoc();
+  }
+
+  public function getById_benh($id, $limit, $offset)
+  {
+    $id = mysqli_real_escape_string($this->db->link, $id);
+    $query = "SELECT * FROM admin_benh WHERE slug = '$id' LIMIT 1 ";
+    $result = $this->db->select($query);
+
+    if ($result) {
+      $row = $result->fetch_assoc();
+      $benh_id = $row['id'];
+
+      $query_baiviet = "SELECT * FROM admin_baiviet WHERE id_benh = $benh_id ORDER BY id DESC LIMIT $limit OFFSET $offset";
+      $result_baiviet = $this->db->select($query_baiviet);
+      return $result_baiviet;
+    } else {
+      // Xử lý khi không tìm thấy bệnh với slug tương ứng
+      echo "Không tìm thấy bệnh với slug '$id'";
+      return false;
+    }
+  }
+
+  public function getTotalCount($tieuDe,$IdBenh)
+  {
+    $tieuDe = mysqli_real_escape_string($this->db->link, $tieuDe);
+    if ($tieuDe !== '' || $IdBenh !== '') {
+      $query = "SELECT COUNT(*) AS total FROM admin_baiviet WHERE tieu_de LIKE '%$tieuDe%' ";
+      if (!empty($IdBenh)) {
+        $query .= " AND id_benh = '$IdBenh'";
+      }
+    } else {
+      $query = "SELECT COUNT(*) AS total FROM admin_baiviet ";
+    }
+
+    $result = $this->db->select($query);
+    $row = $result->fetch_assoc();
+    return $row['total'];
+  }
+
+  public function getTotalCountById($id)
+  {
+    $queryBenh = "SELECT * FROM admin_benh WHERE slug = '$id' LIMIT 1";
+    $resultBenh = $this->db->select($queryBenh);
+    $rowBenh = $resultBenh->fetch_assoc();
+    $id_benh = $rowBenh['id'];
+    if($resultBenh){
+$query = "SELECT COUNT(*) AS total FROM admin_baiviet WHERE id_benh = ' $id_benh' ";
+    $result = $this->db->select($query);
+    $row = $result->fetch_assoc();
+    return $row['total'];
+    }
+
+    
   }
 
   public function update_baiviet($data, $files, $id)
@@ -228,6 +215,147 @@ class post
     }
   }
 
+  public function getBaiViet_bySlug($id)
+  {
+    $id = mysqli_real_escape_string($this->db->link, $id);
+    $query = "SELECT baiviet.id, baiviet.title, baiviet.slug, baiviet.tieu_de, baiviet.id_benh,baiviet.id_khoa, baiviet.content,baiviet.img,baiviet.descriptions,baiviet.keyword,
+    benh.name AS name_benh, 
+    benh.id_khoa AS id_khoa, 
+    khoa.name AS name_khoa ,
+     khoa.hiden AS hiden_khoa 
+    FROM admin_baiviet baiviet 
+    JOIN admin_benh benh ON baiviet.id_benh = benh.id 
+    JOIN admin_khoa khoa ON khoa.id = benh.id_khoa 
+    WHERE baiviet.slug = '$id' 
+    LIMIT 1";
+    $result = $this->db->select($query);
+    if ($result) {
+      return $result->fetch_assoc();
+    } else {
+      return null;
+    }
+  }
+
+  public function getAllDanhSachBaiVietNew($khoa)
+  {
+    $query = "SELECT baiviet.*, 
+    benh.slug AS slug_benh, 
+    benh.id AS id_benh, 
+    benh.id_khoa AS id_benh_khoa, 
+    khoa.slug AS slug_khoa 
+    FROM admin_baiviet baiviet 
+    JOIN admin_benh benh ON baiviet.id_benh = benh.id
+    JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
+     WHERE khoa.slug = '$khoa'
+    ORDER BY baiviet.id DESC LIMIT 5";
+
+    $result = $this->db->select($query);
+    if ($result && $result->num_rows > 0) {
+      $baivietArr = [];
+      while ($row = $result->fetch_assoc()) {
+        // Lấy id_khoa từ bảng admin_benh
+        $id_benh_khoa = $row['id_benh_khoa'];
+
+
+        $query_khoa = "SELECT * FROM admin_khoa WHERE id = $id_benh_khoa";
+        $result_khoa = $this->db->select($query_khoa);
+
+        if ($result_khoa && $result_khoa->num_rows > 0) {
+          $khoa_info = $result_khoa->fetch_assoc();
+          // Thêm thông tin từ bảng admin_khoa vào mảng baivietArr
+          $row['name'] = $khoa_info['name'];
+          $row['slug_khoa'] = $khoa_info['slug'];
+        }
+
+        // Thêm bài viết vào mảng kết quả
+        $baivietArr[] = $row;
+      }
+
+      return $baivietArr;
+    } else {
+      return [];
+    }
+  }
+
+  public function getDanhSachBaiVietNew()
+  {
+    $query = "SELECT baiviet.*, 
+    benh.slug AS slug_benh, 
+    benh.id AS id_benh, 
+    benh.id_khoa AS id_benh_khoa, 
+    khoa.slug AS slug_khoa 
+    FROM admin_baiviet baiviet 
+    JOIN admin_benh benh ON baiviet.id_benh = benh.id
+    JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
+    ORDER BY baiviet.id DESC 
+    LIMIT 5";
+
+    $result = $this->db->select($query);
+    if ($result && $result->num_rows > 0) {
+      $baivietArr = [];
+      while ($row = $result->fetch_assoc()) {
+        // Lấy id_khoa từ bảng admin_benh
+        $id_benh_khoa = $row['id_benh_khoa'];
+
+
+        $query_khoa = "SELECT * FROM admin_khoa WHERE id = $id_benh_khoa";
+        $result_khoa = $this->db->select($query_khoa);
+
+        if ($result_khoa && $result_khoa->num_rows > 0) {
+          $khoa_info = $result_khoa->fetch_assoc();
+          // Thêm thông tin từ bảng admin_khoa vào mảng baivietArr
+          $row['name'] = $khoa_info['name'];
+          $row['slug_khoa'] = $khoa_info['slug'];
+        }
+
+        // Thêm bài viết vào mảng kết quả
+        $baivietArr[] = $row;
+      }
+
+      return $baivietArr;
+    } else {
+      return [];
+    }
+  }
+
+  public function getPaginationTinTuc($limit, $offset, $tieuDe, $IdBenh)
+  {
+    $tieuDe = mysqli_real_escape_string($this->db->link, $tieuDe);
+    $IdBenh = mysqli_real_escape_string($this->db->link, $IdBenh);
+
+    if ($tieuDe !== '' || $IdBenh !== '') {
+      $query = "SELECT baiviet.*, user.user_name, user.email , 
+      user.full_name,
+      benh.name AS ten_benh,
+        benh.id_khoa AS id_benh_khoa, 
+        khoa.slug AS slug_khoa 
+        FROM admin_baiviet baiviet 
+        JOIN admin_user user ON baiviet.user_id = user.id
+        JOIN admin_benh benh ON baiviet.id_benh = benh.id
+       JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
+       WHERE baiviet.tieu_de LIKE '%$tieuDe%' ";
+
+      if (!empty($IdBenh)) {
+        $query .= " AND benh.id = '$IdBenh'";
+      }
+      $query .= " ORDER BY baiviet.id DESC LIMIT $limit OFFSET $offset";
+    } else {
+      $query = "SELECT baiviet.*, user.user_name, user.email , 
+      user.full_name,
+      benh.name AS ten_benh,
+        benh.id_khoa AS id_benh_khoa, 
+        khoa.slug AS slug_khoa 
+        FROM admin_baiviet baiviet 
+        JOIN admin_user user ON baiviet.user_id = user.id
+        JOIN admin_benh benh ON baiviet.id_benh = benh.id
+       JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
+     
+        ORDER BY baiviet.id DESC LIMIT $limit OFFSET $offset";
+    }
+
+    $result = $this->db->select($query);
+    return $result;
+  }
 
   public function getBaiVietDauTienByBenh ($slug_benh){
    
@@ -237,10 +365,11 @@ class post
     if($resultBenh){
       $benh = $resultBenh->fetch_assoc();
       $id = $benh['id'];
-      $query = "SELECT baiviet.*, 
+      $query = "SELECT baiviet.id, baiviet.title, baiviet.slug, baiviet.tieu_de, baiviet.id_benh,baiviet.id_khoa, baiviet.content, ,baiviet.img,baiviet.descriptions,baiviet.keyword,
       benh.name AS name_benh, 
       benh.id_khoa AS id_khoa, 
-      khoa.name AS name_khoa 
+      khoa.name AS name_khoa ,
+       khoa.hiden AS hiden_khoa 
       FROM admin_baiviet baiviet 
       JOIN admin_benh benh ON baiviet.id_benh = benh.id 
       JOIN admin_khoa khoa ON khoa.id = benh.id_khoa 
@@ -255,3 +384,5 @@ class post
    
   }
 }
+
+?>

@@ -1,18 +1,15 @@
-<?php include "inc/header.php" ?>
+<?php include_once "inc/header.php" ?>
 <link rel="stylesheet" href="<?php echo $local ?>/css/danh-muc-ky-thuat.min.css">
+
 </head>
 
 <body>
-    <?php include_once 'layout/headerLayout.php' ?>
-     <main>
+    <?php include "layout/header_layout.php" ?>
+
+    <main>
         <article>
-            <?php include "layout/sliderLayout.php" ?>
-            
-             <div class="checkSendPhoneMobile"  style="margin-top: 170px;" ></div>
-            <section id="menu_logo_mobile" >
-                <?php include 'layout/menu_logo.php' ?> 
-            </section>
-            <section class="technical" >
+
+        <section class="technical" >
                 <div class="technical_title" >
                    1. Danh mục Kỹ Thuật Ngoại Khoa
                 </div>
@@ -28,7 +25,6 @@
                 </div>
             </section>
 
-            </article>
+        </article>
     </main>
-    
-     <?php include_once 'inc/footer.php' ?>
+    <?php include_once "inc/footer.php" ?>

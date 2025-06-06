@@ -1,3 +1,4 @@
+
 <?php
 include '../lib/session.php';
 Session::checkSession();
@@ -12,8 +13,7 @@ $local = 'http://localhost/_andong/phongkhamandong.vn';
 // $local = 'https://phongkhamandong.vn';
 ?>
 <?php
-function getImagesFromFolder($folderPath)
-{
+function getImagesFromFolder($folderPath) {
     $images = [];
     $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
     // Mở thư mục
@@ -52,7 +52,7 @@ header("Cache-Control: max-age=2592000");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phòng khám Chuyên khoa An Đông</title>
+    <title>Phòng khám chuyên khoa An Đông clinic</title>
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/toastr.min.css" />
@@ -63,8 +63,8 @@ header("Cache-Control: max-age=2592000");
     <!-- gắn ckeditor -->
     <script src="<?php echo $local ?>/admin/ckeditor/ckeditor.js" charset="utf-8"></script>
 
-    <!-- datepicker styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+      <!-- datepicker styles -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
@@ -73,7 +73,6 @@ header("Cache-Control: max-age=2592000");
     body {
         overflow: hidden;
     }
-
     .btn-icon {
         font-size: 25px;
         cursor: pointer;
@@ -96,7 +95,7 @@ header("Cache-Control: max-age=2592000");
                 </div>
             </div>
             <ul class="sidebar-nav">
-                <!-- <?php if (Session::get('role') === '1') { ?>
+            <?php if (Session::get('role') === '1') { ?>
                     <li class="sidebar-item">
                         <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#benh-ly" aria-expanded="false" aria-controls="benh-ly">
                             <i class="fa-solid fa-viruses"></i>
@@ -109,6 +108,9 @@ header("Cache-Control: max-age=2592000");
                             </li>
                             <li style="padding-left: 10%;" class="sidebar-item">
                                 <a href="benh-list.php" class="sidebar-link"> <i class="fa-solid fa-list-ol"></i>Danh sách bệnh lý</a>
+                            </li>
+                            <li style="padding-left: 10%;" class="sidebar-item">
+                                <a href="khoa-list.php" class="sidebar-link"> <i class="fa-solid fa-list-ol"></i>Danh sách khoa</a>
                             </li>
                         </ul>
                     </li>
@@ -129,34 +131,25 @@ header("Cache-Control: max-age=2592000");
                         </ul>
                     </li>
 
-                <?php } ?> -->
-                <?php if (Session::get('role') === '1' || Session::get('role') === '2') { ?>
-                    <li class="sidebar-item">
-                        <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                            <i class="fa-brands fa-artstation"></i>
-                            <span>QL bài viết</span>
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li style="padding-left: 10%;" class="sidebar-item">
-
-                                <a href="bai-viet-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo bài viết</a>
-                            </li>
-                            <li style="padding-left: 10%;" class="sidebar-item">
-                                <a href="bai-viet-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách bài viết</a>
-                            </li>
-                        </ul>
-                    </li>
-
                 <?php } ?>
-                <!-- <?php if (Session::get('role') === '1' || Session::get('role') === '3') { ?>
-                    <li class="sidebar-item">
-                        <a href="dat_lich_kham_list.php" class="sidebar-link">
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <span>QL Lịch khám</span>
-                        </a>
-                    </li>
+            <?php if (Session::get('role') === '1' || Session::get('role') === '2') { ?>
+                <li class="sidebar-item">
+                    <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="fa-brands fa-artstation"></i>
+                        <span>QL bài viết</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li style="padding-left: 10%;" class="sidebar-item">
 
-                <?php } ?> -->
+                            <a href="bai-viet-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo bài viết</a>
+                        </li>
+                        <li style="padding-left: 10%;" class="sidebar-item">
+                            <a href="bai-viet-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách bài viết</a>
+                        </li>
+                    </ul>
+                </li>
+              
+                <?php } ?>
         </aside>
 
         <div class="main ">
@@ -173,7 +166,7 @@ header("Cache-Control: max-age=2592000");
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-
+                            
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

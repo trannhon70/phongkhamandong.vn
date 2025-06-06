@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include 'inc/header.php';
 include '../classes/bai_viet.php';
 if (Session::get('role') === '1' || Session::get('role') === '2') {

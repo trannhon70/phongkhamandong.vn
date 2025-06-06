@@ -24,6 +24,23 @@ include_once($filepath . '/../helpers/format.php');
         return $result;
         
       }
+
+      public function getPaginationKhoas($limit, $offset) {
+        $query = "SELECT * FROM admin_khoa
+                  ORDER BY admin_khoa.id DESC LIMIT $limit OFFSET $offset";
+    
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function getTotalCountKhoas(){
+      
+      $query = "SELECT COUNT(*) AS total FROM admin_khoa ";
+      
+      $result = $this->db->select($query);
+      $row = $result->fetch_assoc();
+      return $row['total'];
+    }
       
       
   }
