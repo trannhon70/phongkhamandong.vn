@@ -59,8 +59,8 @@ setcookie(
    
     header('Server-Timing: db;desc="Database";dur=' . $dbReadTotalTime);
 
-    $local ='http://localhost/_andong/phongkhamandong.vn'
-    // $local ='https://phongkhamandong.vn'
+    // $local ='http://localhost/_andong/phongkhamandong.vn'
+    $local ='https://phongkhamandong.vn'
     ?>
 <!DOCTYPE html>
 <html ⚡ lang="en">

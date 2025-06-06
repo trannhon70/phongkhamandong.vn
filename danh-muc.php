@@ -356,62 +356,7 @@ setTitleAndScroll();
                 } else {
                     console.warn("One or more elements were not found in the DOM.");
                 }
-                // Create menu for h2 and h3
-                //const menuNav = document.querySelector('.danhmuc__menu-nav > ul');
-                // const headings = baiVietElement.querySelectorAll('h2, h3');
-
-                // let currentH2 = null;
-                // let menuList = document.createElement('ul');
-                // headings.forEach((heading) => {
-                //     const id = heading.textContent.replace(/\s+/g, '-').toLowerCase();
-                //     heading.id = id;
-                //     if (heading.tagName === 'H2') {
-                //         if (currentH2) {
-                //             // Append the previous menuList under the last H2
-                //             currentH2.appendChild(menuList);
-                //         }
-                //         // Create a new H2 list item
-                //         currentH2 = document.createElement('li');
-                //         currentH2.classList.add('danhmuc__menu-item');
-                //         const h2Link = document.createElement('a');
-                //         h2Link.href = `#${id}`;
-                //         h2Link.textContent = heading.textContent;
-                //         currentH2.appendChild(document.createElement('span')); // Add the span
-                //         currentH2.appendChild(h2Link);
-                //         menuList = document.createElement('ul');
-                //         menuNav.appendChild(currentH2);
-                //     } else if (heading.tagName === 'H3' && currentH2) {
-                //         // Create a new H3 list item
-                //         const h3Item = document.createElement('li');
-                //         h3Item.classList.add('danhmuc__menu-subitem');
-                //         const h3Link = document.createElement('a');
-                //         h3Link.href = `#${id}`;
-                //         h3Link.textContent = `> ${heading.textContent}`;
-                //         h3Item.appendChild(h3Link);
-                //         // Create a new ul for h3 items if not already created
-                //         if (!menuList.classList.contains('danhmuc__menu-ul')) {
-                //             menuList.classList.add('danhmuc__menu-ul');
-                //         }
-                //         menuList.appendChild(h3Item);
-                //     }
-                // });
-                // // Append the last menuList (for the last H2)
-                // if (currentH2) {
-                //     currentH2.appendChild(menuList);
-                // }
-                // // Smooth scroll when clicking on menu links
-                // menuNav.addEventListener('click', (event) => {
-                //     if (event.target.tagName === 'A') {
-                //         event.preventDefault();
-                //         const targetId = event.target.getAttribute('href').substring(1);
-                //         const targetElement = document.getElementById(targetId);
-                //         if (targetElement) {
-                //             targetElement.scrollIntoView({
-                //                 behavior: 'smooth'
-                //             });
-                //         }
-                //     }
-                // });
+                
             }
         </script>
 
