@@ -53,25 +53,25 @@
                         </nav>
 
                     </li>
-                    <a href="<?php echo $local ?>/doi-ngu-bac-si.php" class="header__body-container-right-item">
+                    <a href="#" class="header__body-container-right-item">
                         <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_doingubs.webp" alt="...">
                         <div>
                             ĐỘI NGŨ BÁC SĨ
                         </div>
                     </a>
-                    <a href="<?php echo $local ?>/danh-muc-ky-thuat.php" class="header__body-container-right-item">
+                    <a href="#" class="header__body-container-right-item">
                         <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_danhmuckythuat.webp" alt="...">
                         <div>
                             DANH MỤC KỸ THUẬT
                         </div>
                     </a>
-                    <a href="<?php echo $local ?>/bao-gia.php" class="header__body-container-right-item">
+                    <a href="#" class="header__body-container-right-item">
                         <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_baogia.webp" alt="...">
                         <div>
                             BÁO GIÁ
                         </div>
                     </a>
-                    <a href="<?php echo $local ?>" class="header__body-container-right-item">
+                    <a href="#" class="header__body-container-right-item">
                         <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_datlichkham.webp" alt="...">
                         <div>
                             ĐẶT LỊCH KHÁM
