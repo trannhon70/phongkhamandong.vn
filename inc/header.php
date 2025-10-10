@@ -9,7 +9,8 @@ header("Cache-Control: public, max-age=31536000, must-revalidate");
 // Danh sách IP bị chặn
 $blocked_ips = ['115.78.128.131'];
 
-function getClientIp() {
+function getClientIp()
+{
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         return $_SERVER['HTTP_CLIENT_IP'];
     } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -41,27 +42,27 @@ setcookie(
 );
 
 
-    include_once 'classes/bai_viet.php';
-    include_once 'classes/tin_tuc.php';
-    include_once 'classes/benh.php';
+include_once 'classes/bai_viet.php';
+include_once 'classes/tin_tuc.php';
+include_once 'classes/benh.php';
 
-    spl_autoload_register(function ($className) {
-        include_once "classes/" . $className . ".php";
-    });
-    $dbReadStarTime = hrtime(true);
+spl_autoload_register(function ($className) {
+    include_once "classes/" . $className . ".php";
+});
+$dbReadStarTime = hrtime(true);
 
-    $bai_viet = new post();
-    $tin_tuc = new news();
-    $benh = new Benh();
+$bai_viet = new post();
+$tin_tuc = new news();
+$benh = new Benh();
 
-    $dbReadEndTime = hrtime(true);
-    $dbReadTotalTime = ($dbReadEndTime - $dbReadStarTime) / 1e+6;
-   
-    header('Server-Timing: db;desc="Database";dur=' . $dbReadTotalTime);
+$dbReadEndTime = hrtime(true);
+$dbReadTotalTime = ($dbReadEndTime - $dbReadStarTime) / 1e+6;
 
-    // $local ='http://localhost/_andong/phongkhamandong.vn'
-    $local ='https://phongkhamandong.vn'
-    ?>
+header('Server-Timing: db;desc="Database";dur=' . $dbReadTotalTime);
+
+$local = 'http://localhost/_andong/phongkhamandong.vn'
+// $local ='https://phongkhamandong.vn'
+?>
 <!DOCTYPE html>
 <html ⚡ lang="en">
 
@@ -71,8 +72,8 @@ setcookie(
 
     <script defer src="<?php echo $local ?>/js/cdn_image.min.js"></script>
     <link rel="preload" fetchpriority="high" as="image" href="<?php echo $local ?>/images/banner/banner_mobile.webp"
-    type="image/webp">
-   
+        type="image/webp">
+
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -140,7 +141,7 @@ setcookie(
             }
         </style>
     </noscript>
-    
+
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.webp" type="image/x-icon">
     <link rel="preload" href="css/index.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
     <link rel="preload" href="css/@media_header.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
@@ -158,8 +159,7 @@ setcookie(
 
             // Thêm stylesheet mới dựa trên kích thước cửa sổ
             if (window.innerWidth < 999) {
-                const mobileLink = [
-                    {
+                const mobileLink = [{
                         href: 'css/header_mobile.min.css',
                         id: 'mobile-0'
                     },
@@ -182,15 +182,14 @@ setcookie(
                     link.href = href;
                     link.id = id;
                     link.as = 'style';
-                    link.onload = function () {
+                    link.onload = function() {
                         this.rel = 'stylesheet'; // Khi preload xong, đổi sang stylesheet
                     };
                     document.head.appendChild(link);
                 });
 
             } else {
-                const desktopLink = [
-                    {
+                const desktopLink = [{
                         href: 'css/header.min.css',
                         id: 'desktop-0'
                     },
@@ -214,11 +213,10 @@ setcookie(
         }
 
         updateHeaderStylesheet();
-        
     </script>
 
     <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWJ4VGC40M"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWJ4VGC40M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -226,8 +224,8 @@ setcookie(
 
   gtag('config', 'G-XWJ4VGC40M');
 </script> -->
-  
-<!-- <script>
+
+    <!-- <script>
     // Trì hoãn 10 giây trước khi tải Google Analytics
     setTimeout(function () {
         console.log('Tải Google Analytics...');
@@ -248,27 +246,30 @@ setcookie(
     }, 10000); // Trì hoãn 10 giây
 </script> -->
 
-<script>
-    // Chỉ tải Google Analytics khi người dùng cuộn xuống
-    document.addEventListener('scroll', function loadGA() {
-        console.log('Người dùng cuộn xuống - Tải Google Analytics');
-        
-        // Tạo thẻ script
-        var g = document.createElement('script'),
-            s = document.scripts[0];
-        g.src = 'https://www.googletagmanager.com/gtag/js?id=G-XWJ4VGC40M';
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
+    <script>
+        // Chỉ tải Google Analytics khi người dùng cuộn xuống
+        document.addEventListener('scroll', function loadGA() {
+            console.log('Người dùng cuộn xuống - Tải Google Analytics');
 
-        // Cấu hình gtag
-        g.onload = function () {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-XWJ4VGC40M');
-        };
+            // Tạo thẻ script
+            var g = document.createElement('script'),
+                s = document.scripts[0];
+            g.src = 'https://www.googletagmanager.com/gtag/js?id=G-XWJ4VGC40M';
+            g.async = true;
+            s.parentNode.insertBefore(g, s);
 
-        // Xóa sự kiện lắng nghe để không tải lại
-        document.removeEventListener('scroll', loadGA);
-    });
-</script>
+            // Cấu hình gtag
+            g.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'G-XWJ4VGC40M');
+            };
+
+            // Xóa sự kiện lắng nghe để không tải lại
+            document.removeEventListener('scroll', loadGA);
+        });
+    </script>
