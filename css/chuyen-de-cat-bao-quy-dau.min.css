@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-display: optional;
+    font-family: "Google Sans", sans-serif;
+    text-decoration: none !important;
+}
+
+body {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden !important;
+    background-color: #f2fbff;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0e2d9e;
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_center {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00bbff;
+}
+.header_center strong {
+    color: white;
+    font-weight: 700;
+}
+
+main {
+    padding: 10px;
+    box-sizing: border-box;
+    /* margin-top: 50px; */
+}
+
+.title_h2 {
+    margin-top: 10px;
+}
+
+h2 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0678fc;
+    border-bottom: 2px solid #0678fc;
+    padding: 3px 0px;
+    text-transform: uppercase;
+    display: inline;
+    line-height: 32px;
+}
+
+h2 span {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0678fc;
+    display: block;
+}
+
+.glans {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin-top: 10px;
+}
+
+.glans_left {
+    width: 20%;
+    background-color: #0678fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.glans_right {
+    width: 80%;
+    padding: 5px 10px;
+}
+
+.glans_right_title {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+}
+
+.glans_right_text {
+    margin-top: 3px;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.method {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.method_card {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.method_card_absolute {
+    position: absolute;
+    top: -23px;
+    left: 15px;
+    width: 75px;
+    height: 50px;
+    background-color: #057aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.method_card_title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 25px;
+}
+
+.method_card_text {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+.expense_title {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-top: 5px;
+}
+
+.expense_body {
+    border-left: 3px solid #eda547;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.note {
+    background-color: #0678fc;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.note_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.note_1_button {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 16px;
+    padding: 7px 10px;
+    background: linear-gradient(#f3b52a, #fa8453);
+    margin-top: 7px;
+    font-weight: 700;
+}
+
+.footer {
+    background-color: #0e2e9e;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+}
+
+.footer_title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.footer_title_right > h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.footer_title_right > span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer_item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}

@@ -16,10 +16,10 @@ $local = 'https://phongkhamandong.vn';
         content="Phòng khám chuyên khoa chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
     <title>Phòng khám chuyên khoa</title>
     <link rel="icon" href="<?php echo $local ?>/images/nam_khoa/icons/icon_logo.webp" type="image/x-icon">
-    <link rel="preload" href="css/chuyen-de-nam-khoa.min.css" as="style"
+    <link rel="preload" href="css/chuyen-de-cat-bao-quy-dau.min.css" as="style"
         onload='this.onload=null,this.rel="stylesheet"'>
     <noscript>
-        <link rel="stylesheet" href="css/chuyen-de-nam-khoa.min.css">
+        <link rel="stylesheet" href="css/chuyen-de-cat-bao-quy-dau.min.css">
     </noscript>
     <!-- <script>
     document.addEventListener('scroll', function loadGA() {
