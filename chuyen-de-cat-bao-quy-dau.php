@@ -308,7 +308,7 @@ $local = 'https://phongkhamandong.vn';
             src="<?php echo $local ?>/images/chuyen_de/users/footer_mobile.gif" alt="...">
     </div>
 
-    <!-- <script language="javascript" src="https://npa.zoosnet.net/JS/LsJS.aspx?siteid=NPA46777247&float=1&lng=en"></script> -->
+    <script language="javascript" src="https://npa.zoosnet.net/JS/LsJS.aspx?siteid=NPA46777247&float=1&lng=en"></script>
 </body>
 
 </html>
