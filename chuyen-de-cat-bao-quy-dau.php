@@ -46,15 +46,17 @@ $local = 'https://phongkhamandong.vn';
 
 <body>
 
-    <header class="header">
-        <img width="30" height="30" loading="lang" src="<?php echo $local ?>/images/chuyen_de/icons/icon_menu.webp"
-            alt="...">
-        <div class="header_center">Chuyên khoa <strong>An Đông</strong></div>
-        <img width="30" height="30" loading="lazy" src="<?php echo $local ?>/images/chuyen_de/icons/icon_dot.webp"
-            alt="...">
+    <header style="margin: 0 auto;">
+        <div class="header">
+            <img width="30" height="30" loading="lang" src="<?php echo $local ?>/images/chuyen_de/icons/icon_menu.webp"
+                alt="...">
+            <div class="header_center">Chuyên khoa <strong>An Đông</strong></div>
+            <img width="30" height="30" loading="lazy" src="<?php echo $local ?>/images/chuyen_de/icons/icon_dot.webp"
+                alt="...">
+        </div>
     </header>
     <main>
-        <section>
+        <section style="margin-top: 50px;">
             <a aria-label="liên hệ" href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
                 <img style="width: 100%; height: auto;" loading="lazy"
                     src="<?php echo $local ?>/images/chuyen_de/users/banner.webp" alt="...">
@@ -216,6 +218,15 @@ $local = 'https://phongkhamandong.vn';
             <img style="width: 100%; height: auto;" loading="lazy"
                 src="<?php echo $local ?>/images/chuyen_de/users/ban_co_biet_3.webp" alt="...">
         </section>
+        <section class="section__button">
+            <a aria-label="liên hệ" class="animated-button"
+                href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Đặt lịch khám ngay</a>
+        </section>
         <section class="title_h2">
             <h2>phòng khám cắt bao quy đầu BS võ minh nguyễn <span></span></h2>
         </section>
@@ -292,7 +303,12 @@ $local = 'https://phongkhamandong.vn';
             Hotline: 0968 063 109
         </a>
     </footer>
-    <script language="javascript" src="https://npa.zoosnet.net/JS/LsJS.aspx?siteid=NPA46777247&float=1&lng=en"></script>
+    <div class="footer_fixed">
+        <img style="width: 100%; height: auto;" loading="lazy"
+            src="<?php echo $local ?>/images/chuyen_de/users/footer_mobile.gif" alt="...">
+    </div>
+
+    <!-- <script language="javascript" src="https://npa.zoosnet.net/JS/LsJS.aspx?siteid=NPA46777247&float=1&lng=en"></script> -->
 </body>
 
 </html>

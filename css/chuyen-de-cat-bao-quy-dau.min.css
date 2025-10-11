@@ -30,7 +30,13 @@ body {
     height: 50px;
     padding: 10px;
     width: 100%;
+    max-width: 600px;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
 }
 
 .header_center {
@@ -211,6 +217,7 @@ h2 span {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     color: white;
+    margin-bottom: 80px;
 }
 
 .footer_title {
@@ -411,4 +418,15 @@ h2 span {
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
+}
+
+.footer_fixed {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
 }
