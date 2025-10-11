@@ -55,14 +55,23 @@ $local = 'https://phongkhamandong.vn';
     </header>
     <main>
         <section>
-            <div>
+            <a aria-label="liên hệ" href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
                 <img style="width: 100%; height: auto;" loading="lazy"
                     src="<?php echo $local ?>/images/chuyen_de/users/banner.webp" alt="...">
-            </div>
+            </a>
             <div>
                 <img style="width: 100%; height: auto;" loading="lazy"
                     src="<?php echo $local ?>/images/chuyen_de/users/ban_co_biet_1.webp" alt="...">
             </div>
+        </section>
+        <section class="section__button">
+            <a aria-label="liên hệ" class="animated-button"
+                href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Đặt lịch khám ngay</a>
         </section>
         <section class="title_h2">
             <h2>Trường hợp cần cắt bao quy đầu <span></span></h2>
@@ -154,10 +163,11 @@ $local = 'https://phongkhamandong.vn';
                 </div>
             </div>
         </section>
-        <section style="margin-top: 10px;">
+        <a aria-label="liên hệ" href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"
+            style="margin-top: 10px; display: block;">
             <img style="width: 100%; height: auto;" loading="lazy"
                 src="<?php echo $local ?>/images/chuyen_de/users/banner_1.webp" alt="...">
-        </section>
+        </a>
         <section class="title_h2">
             <h2>trường hợp cần cắt bao quy đầu <span></span></h2>
         </section>

@@ -3,8 +3,8 @@ ob_start("ob_gzhandler");
 header("Timing-Allow-Origin: *");
 header("Cache-Control: public, max-age=31536000, must-revalidate");
 
-// $local = 'http://localhost/_andong/phongkhamandong.vn';
-$local = 'https://phongkhamandong.vn';
+$local = 'http://localhost/_andong/phongkhamandong.vn';
+// $local = 'https://phongkhamandong.vn';
 ?>
 <!DOCTYPE html>
 <html ⚡ lang="en">
