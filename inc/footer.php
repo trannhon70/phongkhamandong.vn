@@ -14,39 +14,47 @@
                          <li><a href="<?php echo $local ?>">Xét Nghiệm</a></li>
                          <li><a href="<?php echo $local ?>">Chuẩn Đoán Hình Ảnh</a></li>
                      </ul>
-                     <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="footer__top-row-right-body-img">
-                         <img width="284px" height="52px" src="<?php echo $local ?>/images/background/bg_tuvan.webp" alt="...">
+                     <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"
+                         class="footer__top-row-right-body-img">
+                         <img width="284px" height="52px" src="<?php echo $local ?>/images/background/bg_tuvan.webp"
+                             alt="...">
                      </a>
                      <div class="footer__top-row-right-body-icon">
                          <div></div>
-                         <img class="footer__top-row-right-body-icon-happy" loading="lazy" width="201px" height="201px" src="<?php echo $local ?>/images/icons/icon_happy.webp" alt="...">
+                         <img class="footer__top-row-right-body-icon-happy" loading="lazy" width="201px" height="201px"
+                             src="<?php echo $local ?>/images/icons/icon_happy.webp" alt="...">
                      </div>
                  </div>
              </div>
          </div>
      </div>
      <div class="footer__bottom">
-         <img width="100%" height="auto" loading="lazy" src="<?php echo $local ?>/images/background/bg_footer.webp" alt="...">
+         <img width="100%" height="auto" loading="lazy" src="<?php echo $local ?>/images/background/bg_footer.webp"
+             alt="...">
          <div class="footer__bottom-container">
              <div class="footer__bottom-container-body">
                  <div class="footer__bottom-container-body-list">
                      <div class="footer__bottom-container-body-list-item">
                          <div>
-                             <img loading="lazy" width="100px" height="100px" src="<?php echo $local ?>/images/icons/icon_logo.webp" alt="...">
+                             <img loading="lazy" width="100px" height="100px"
+                                 src="<?php echo $local ?>/images/icons/icon_logo.webp" alt="...">
                              <div>
                                  <strong>An Đông</strong>
                                  <p>Phòng khám chuyên khoa</p>
                              </div>
                          </div>
-                         <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp" alt="line">
+                         <img width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_line.webp"
+                             alt="line">
 
                      </div>
                      <div class="footer__bottom-container-body-list-item">
-                         <img class="footer__bottom-container-body-list-item-img" loading="lazy" width="248px" height="248px" src="<?php echo $local ?>/images/icons/icon_heat1.webp" alt="...">
+                         <img class="footer__bottom-container-body-list-item-img" loading="lazy" width="248px"
+                             height="248px" src="<?php echo $local ?>/images/icons/icon_heat1.webp" alt="...">
                      </div>
                  </div>
                  <ul>
-                     <li><strong>Địa chỉ:</strong>Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt Nam/li>
+                     <li><strong>Địa chỉ:</strong>Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt
+                         Nam/li>
                      <li><strong>Thời gian làm việc: </strong>8:00 - 20:00</li>
                      <li><strong>Hotline: </strong>028 7777 9888</li>
                      <li>Tất cả các ngày trong tuần, kể cả ngày lễ</li>
@@ -62,8 +70,8 @@
 
  <section id="footer_mobileFix">
      <div style="position: relative; margin-top: 3px;">
-         <amp-anim loading="lazy" width="768" height="200" src="<?php echo $local ?>/images/background/footer_mobile.gif"
-             alt="..." layout="responsive">
+         <amp-anim loading="lazy" width="768" height="200"
+             src="<?php echo $local ?>/images/background/footer_mobile.gif" alt="..." layout="responsive">
          </amp-anim>
          <div class="footer_mobile_a">
              <a aria-label="Tư vấn" style="width: 30%; height: 100px; display: block; "
@@ -80,10 +88,12 @@
 
  <div class="icon__list">
      <a href="tel:+02877779888" class="icon__list-item">
-         <img loading="lazy" width="41px" height="41px" src="<?php echo $local ?>/images/icons_chat/icon_phone.webp" alt="...">
+         <img loading="lazy" width="41px" height="41px" src="<?php echo $local ?>/images/icons_chat/icon_phone.webp"
+             alt="...">
      </a>
      <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="icon__list-item1">
-         <img loading="lazy" width="41px" height="41px" src="<?php echo $local ?>/images/icons_chat/icon_mess.webp" alt="...">
+         <img loading="lazy" width="41px" height="41px" src="<?php echo $local ?>/images/icons_chat/icon_mess.webp"
+             alt="...">
          <p class="randum__number">
              10
          </p>
@@ -98,8 +108,10 @@
  <div id="modal__footer" class="modal__footer" style="display:none;">
      <div class="modal__footer-content">
          <span class="close" onclick="closeModal_footer()">&times;</span>
-         <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" style="margin-top: 30px; display:block;">
-             <img width="100%" loading="lazy" height="auto" src="<?php echo $local ?>/images/icons_chat/goi-kham.gif" alt="">
+         <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"
+             style="margin-top: 30px; display:block;">
+             <img width="100%" loading="lazy" height="auto" src="<?php echo $local ?>/images/icons_chat/goi-kham.gif"
+                 alt="">
          </a>
      </div>
  </div>
@@ -262,7 +274,7 @@
              <p>phòng khám chuyên khoa</p>
          </div>
          <ul>
-             <li><strong>Địa chỉ:</strong> An Dương Vương, P.4, Q.5, TP.HCM</li>
+             <li><strong>Địa chỉ:</strong> An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh</li>
              <li><strong>Hotline: </strong>028 7777 9888</li>
              <li><strong>Thời gian làm việc: </strong>8:00 - 20:00</li>
              <li>Tất cả các ngày trong tuần, kể cả ngày lễ</li>
