@@ -46,7 +46,7 @@
                      </div>
                  </div>
                  <ul>
-                     <li><strong>Địa chỉ:</strong>360 An Dương Vương, P.4, Q.5, TP.HCM</li>
+                     <li><strong>Địa chỉ:</strong>Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt Nam/li>
                      <li><strong>Thời gian làm việc: </strong>8:00 - 20:00</li>
                      <li><strong>Hotline: </strong>028 7777 9888</li>
                      <li>Tất cả các ngày trong tuần, kể cả ngày lễ</li>

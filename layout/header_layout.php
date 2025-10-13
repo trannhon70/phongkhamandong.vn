@@ -8,28 +8,32 @@
                 <strong>Hotline tư vấn: 028 7777 9888 </strong>
             </div>
             <div class="header__top-item">
-                360 An Dương Vương, P.4, Q.5, TP.HCM
+                Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt Nam
             </div>
         </div>
     </div>
     <div class="header__body">
         <img width="100%" height="auto" src="<?php echo $local ?>/images/banner/banner-big.webp" alt="...">
-        <img class="header__body-img" width="100%" height="auto" src="<?php echo $local ?>/images/banner/banner-small.webp" alt="...">
+        <img class="header__body-img" width="100%" height="auto"
+            src="<?php echo $local ?>/images/banner/banner-small.webp" alt="...">
         <div class="header__body-menu">
             <div class="header__body-container">
                 <a class="header__body-container-left" href="<?php echo $local ?>">
-                    <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/logo/andong-logo.webp" alt="...">
+                    <img loading="lazy" width="100%" height="auto"
+                        src="<?php echo $local ?>/images/logo/andong-logo.webp" alt="...">
                 </a>
                 <ul class="header__body-container-right">
                     <a href="<?php echo $local ?>" class="header__body-container-right-item">
-                        <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_trangchu.webp" alt="...">
+                        <img loading="lazy" width="50px" height="50px"
+                            src="<?php echo $local ?>/images/icons/icon_trangchu.webp" alt="...">
                         <div>
                             TRANG CHỦ
                         </div>
                     </a>
                     <li class="header__body-container-right-item header__body-active">
                         <div>
-                            <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_danhmucbenh.webp" alt="...">
+                            <img loading="lazy" width="50px" height="50px"
+                                src="<?php echo $local ?>/images/icons/icon_danhmucbenh.webp" alt="...">
                             <div>
                                 DANH MỤC BỆNH
                             </div>
@@ -54,25 +58,29 @@
 
                     </li>
                     <a href="#" class="header__body-container-right-item">
-                        <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_doingubs.webp" alt="...">
+                        <img loading="lazy" width="50px" height="50px"
+                            src="<?php echo $local ?>/images/icons/icon_doingubs.webp" alt="...">
                         <div>
                             ĐỘI NGŨ BÁC SĨ
                         </div>
                     </a>
                     <a href="#" class="header__body-container-right-item">
-                        <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_danhmuckythuat.webp" alt="...">
+                        <img loading="lazy" width="50px" height="50px"
+                            src="<?php echo $local ?>/images/icons/icon_danhmuckythuat.webp" alt="...">
                         <div>
                             DANH MỤC KỸ THUẬT
                         </div>
                     </a>
                     <a href="#" class="header__body-container-right-item">
-                        <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_baogia.webp" alt="...">
+                        <img loading="lazy" width="50px" height="50px"
+                            src="<?php echo $local ?>/images/icons/icon_baogia.webp" alt="...">
                         <div>
                             BÁO GIÁ
                         </div>
                     </a>
                     <a href="#" class="header__body-container-right-item">
-                        <img loading="lazy" width="50px" height="50px" src="<?php echo $local ?>/images/icons/icon_datlichkham.webp" alt="...">
+                        <img loading="lazy" width="50px" height="50px"
+                            src="<?php echo $local ?>/images/icons/icon_datlichkham.webp" alt="...">
                         <div>
                             ĐẶT LỊCH KHÁM
                         </div>
@@ -82,7 +90,8 @@
         </div>
         <div class="header__body-carousel">
             <div class="header__body-carousel-container">
-                <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/banner/banner-hd.webp" alt="...">
+                <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/banner/banner-hd.webp"
+                    alt="...">
             </div>
         </div>
     </div>
@@ -115,18 +124,21 @@
 <header id="header__mobile" class="header__mobile">
     <div class="header_mobile_container">
         <div class="header_mobile_container-body">
-            <img loading="lazy" src="<?php echo $local ?>/images/background/header_mobile.gif" width="100%" height="50px" alt="...">
+            <img loading="lazy" src="<?php echo $local ?>/images/background/header_mobile.gif" width="100%"
+                height="50px" alt="...">
             <div style="position: absolute; top: 0; left: 0; height: 50px; width: 100%; display: flex; ">
                 <div style="width: 50%; height: 50px;">
                 </div>
-                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" style="width: 50%; height: 50px; display: block; "></a>
+                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"
+                    style="width: 50%; height: 50px; display: block; "></a>
             </div>
         </div>
     </div>
     <div class="header_mobile_bottom">
         <div class="header_mobile_bottom_left">
             <a href="trang-chu.html">
-                <amp-img src="<?php echo $local ?>/images/logo/logo_mobile.webp" height="40" width="188" alt="..."></amp-img>
+                <amp-img src="<?php echo $local ?>/images/logo/logo_mobile.webp" height="40" width="188" alt="...">
+                </amp-img>
             </a>
         </div>
         <div class="header_mobile_bottom_right">
@@ -145,27 +157,22 @@
         <!-- <img fetchpriority="high"  width="100%" height="auto" src="<?php echo  $local ?>/images/banner/banner_mobile.webp" alt=""> -->
         <!-- <img src="<?php echo  $local ?>/images/banner/banner_mobile.webp" alt="Banner" width="360" height="180" style="width: 100%; height: auto;"> -->
         <style>
-  .placeholder {
-    background-color: #f0f0f0;
-    width: 360px;
-    height: 180px;
-  }
-  .banner-image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-</style>
-<div class="placeholder" id="bannerPlaceholder"></div>
-<img 
-  id="banner-image"
-  class="banner-image"
-  src="<?php echo  $local ?>/images/banner/banner_mobile.webp" 
-  alt="Banner" 
-  width="360" 
-  height="180"
-  style="opacity: 0; transition: opacity 3s;"
-  onload="document.getElementById('bannerPlaceholder').style.display='none'; this.style.opacity=1;">
+            .placeholder {
+                background-color: #f0f0f0;
+                width: 360px;
+                height: 180px;
+            }
+
+            .banner-image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        </style>
+        <div class="placeholder" id="bannerPlaceholder"></div>
+        <img id="banner-image" class="banner-image" src="<?php echo  $local ?>/images/banner/banner_mobile.webp"
+            alt="Banner" width="360" height="180" style="opacity: 0; transition: opacity 3s;"
+            onload="document.getElementById('bannerPlaceholder').style.display='none'; this.style.opacity=1;">
     </div>
     <!-- <div class="header__mobile-list">
         <ul>
@@ -196,11 +203,10 @@
 <div id="toast-container"></div>
 
 <script>
-    const checkUrl =window.location.pathname.split('/')
+    const checkUrl = window.location.pathname.split('/')
     const fileName = checkUrl[checkUrl.length - 1];
-    if(fileName === 'khuyen-mai.php'){
-       document.querySelector('.header__bottom').style.display = 'none';
-      document.getElementById("banner-image").src = `<?php echo $local ?>/images/banner/bannerKM_mobile.webp`;
+    if (fileName === 'khuyen-mai.php') {
+        document.querySelector('.header__bottom').style.display = 'none';
+        document.getElementById("banner-image").src = `<?php echo $local ?>/images/banner/bannerKM_mobile.webp`;
     }
-    
 </script>

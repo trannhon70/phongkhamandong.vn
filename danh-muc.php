@@ -71,28 +71,33 @@ setTitleAndScroll();
                     <div id="category__left" class="category__left">
                         <div class="category__left-icon">
                             <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
-                                <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_call.webp" alt="...">
+                                <img loading="lazy" width="100%" height="auto"
+                                    src="<?php echo $local ?>/images/icons/icon_call.webp" alt="...">
                             </a>
                             <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
-                                <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_lich.webp" alt="...">
+                                <img loading="lazy" width="100%" height="auto"
+                                    src="<?php echo $local ?>/images/icons/icon_lich.webp" alt="...">
                             </a>
                             <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
-                                <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/icons/icon_mess.webp" alt="...">
+                                <img loading="lazy" width="100%" height="auto"
+                                    src="<?php echo $local ?>/images/icons/icon_mess.webp" alt="...">
                             </a>
                         </div>
                         <div class="category__left-doctor">
                             <div class="category__left-doctor-list">
                                 <div class="category__left-doctor-list-item category__left-doctor-list-item-active">
-                                     <div class="category__left-doctor-list-item-title">
+                                    <div class="category__left-doctor-list-item-title">
                                         BS. Võ minh nguyễn
                                     </div>
-                                    <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/user_bacsinguyen1.webp" alt="...">
+                                    <img loading="lazy" width="100%" height="auto"
+                                        src="<?php echo $local ?>/images/users/user_bacsinguyen1.webp" alt="...">
                                 </div>
                                 <div class="category__left-doctor-list-item ">
                                     <div class="category__left-doctor-list-item-title">
                                         BS. Võ minh nguyễn
                                     </div>
-                                    <img loading="lazy" width="100%" height="auto" src="<?php echo $local ?>/images/users/user_bacsinguyen1.webp" alt="...">
+                                    <img loading="lazy" width="100%" height="auto"
+                                        src="<?php echo $local ?>/images/users/user_bacsinguyen1.webp" alt="...">
                                 </div>
                             </div>
                             <div class="category__left-doctor-pagi">
@@ -126,24 +131,30 @@ setTitleAndScroll();
                                 <div>Chi phí đốt sùi bao nhiêu?</div>
                             </a>
                         </div>
-                        <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="category__left-promotion">
-                            <img width="100%" height="auto" loading="lazy" src="<?php echo $local ?>/images/background/bg_khuyenmai.webp" alt="...">
+                        <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"
+                            class="category__left-promotion">
+                            <img width="100%" height="auto" loading="lazy"
+                                src="<?php echo $local ?>/images/background/bg_khuyenmai.webp" alt="...">
                         </a>
                     </div>
                     <div class="category__right">
                         <div id="category__right-breadcrumb" class="category__right-breadcrumb">
-                            Trang chủ > <?php echo $getPostDetail['name_khoa'] ?> > <?php echo $getPostDetail['name_benh'] ?>
+                            Trang chủ > <?php echo $getPostDetail['name_khoa'] ?> >
+                            <?php echo $getPostDetail['name_benh'] ?>
                         </div>
                         <?php if ($getPostDetail !== 'Hiện tại dữ liệu này chưa có bài viết!') { ?>
                             <h1 id="titleBaiViet" class="category__right-title">
                                 <?php echo $getPostDetail['tieu_de'] ?>
                             </h1>
-                            <div  style="background-color: #DBEAFD; padding: 6px; box-sizing: border-box; border-radius: 10px; display: flex; align-items: center; gap: 10px; font-size: 16px; color: red; margin-top: 10px; line-height: 21px; " >
-                                <img loading="lazy" width="30px" height="30px" src="<?php echo $local ?>/images/icons/icon_KM2025.gif" alt="...">
+                            <div
+                                style="background-color: #DBEAFD; padding: 6px; box-sizing: border-box; border-radius: 10px; display: flex; align-items: center; gap: 10px; font-size: 16px; color: red; margin-top: 10px; line-height: 21px; ">
+                                <img loading="lazy" width="30px" height="30px"
+                                    src="<?php echo $local ?>/images/icons/icon_KM2025.gif" alt="...">
                                 <div>
-                                <strong>**Khuyến mãi</strong>: Chào năm mới 2025 phòng khám gửi tới bệnh nhân chương trình ưu đãi lớn.
-                                Dành cho khách hàng đăng ký trong ngày hôm nay. 
-                                 <!-- <a href="<?php echo $local ?>/khuyen-mai.php?1CT"><strong>Xem chi tiết tại đây</strong></a> -->
+                                    <strong>**Khuyến mãi</strong>: Chào năm mới 2025 phòng khám gửi tới bệnh nhân chương trình
+                                    ưu đãi lớn.
+                                    Dành cho khách hàng đăng ký trong ngày hôm nay.
+                                    <!-- <a href="<?php echo $local ?>/khuyen-mai.php?1CT"><strong>Xem chi tiết tại đây</strong></a> -->
                                 </div>
                             </div>
                             <!-- <div class="danhmuc__menu">
@@ -157,7 +168,7 @@ setTitleAndScroll();
                                     </ul>
                                 </nav>
                             </div> -->
-                            
+
                             <div style="padding-top:10px">
                                 <?php if (Session::get('role') === '1' || Session::get('role') === '2') {
                                 ?>
@@ -178,7 +189,8 @@ setTitleAndScroll();
                             <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
                                 một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
                                 điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                                tuyến miễn phí.<a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">[TƯ VẤN TRỰC TUYẾN]</a>
+                                tuyến miễn phí.<a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">[TƯ VẤN
+                                    TRỰC TUYẾN]</a>
                             </div>
                     </div>
                 <?php } else { ?>
@@ -276,7 +288,8 @@ setTitleAndScroll();
 
 
                         //hiển thị css img chatbox
-                        if (imgElements[i].src.startsWith('<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                        if (imgElements[i].src.startsWith(
+                                '<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                             // if (imgElements[i].src.startsWith('http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                             true) {
                             imgElements[i].style.borderRadius = '8px';
@@ -356,19 +369,20 @@ setTitleAndScroll();
                 } else {
                     console.warn("One or more elements were not found in the DOM.");
                 }
-                
+
             }
         </script>
 
         <script>
             const bodyPlaceholder = document.getElementById("bai-viet");
-            
+
             const loadBody = () => {
                 let content = `<?php echo htmlspecialchars_decode($getPostDetail['content']); ?>`;
                 const phoneRegex = /0968\s063\s109/g; // Regex tìm số điện thoại
-                content = content.replace(phoneRegex, '0968 063 109, 028 7777 9888'); 
+                content = content.replace(phoneRegex, '0968 063 109, 028 7777 9888');
                 const addressRegex = /360,\sAn\sDương\sVương,\sP\.4,\sQ\.5,\sTPHCM\./g;
-                content = content.replace(addressRegex, 'An Dương Vương, P.4, Q.5, TPHCM.');
+                content = content.replace(addressRegex,
+                    'Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt Nam');
                 // Thay "Đa khoa" thành "Chuyên khoa"
                 const multiTagRegex = /Đa\sKhoa/gi;
                 content = content.replace(multiTagRegex, 'Chuyên khoa');
