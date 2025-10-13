@@ -299,7 +299,7 @@ $local = 'https://phongkhamandong.vn';
         <div class="footer_item">
             <img width="25" height="auto" loading="lazy"
                 src="<?php echo $local ?>/images/chuyen_de/icons/icon_location.webp" alt="...">
-            360, An Dương Vương, P4, Q5, TP.HCM
+            Số 360 đường An Dương Vương, Phường Chợ Quán, TP Hồ Chí Minh, Việt Nam
         </div>
         <a href="tel:+0968063109" class="footer_item">
             <img width="20" height="auto" loading="lazy"
