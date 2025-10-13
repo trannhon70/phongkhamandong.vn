@@ -3,8 +3,8 @@ ob_start("ob_gzhandler");
 header("Timing-Allow-Origin: *");
 header("Cache-Control: public, max-age=31536000, must-revalidate");
 
-$local = 'http://localhost/_andong/phongkhamandong.vn';
-// $local = 'https://phongkhamandong.vn';
+// $local = 'http://localhost/_andong/phongkhamandong.vn';
+$local = 'https://phongkhamandong.vn';
 ?>
 <!DOCTYPE html>
 <html ⚡ lang="en">
@@ -93,15 +93,24 @@ $slides = [
 ?>
 
 <body>
-
-    <header class="header">
-        <div class="header__body">
+    <header style="margin: 0 auto;">
+        <div class="header">
+            <img width="30" height="30" loading="lang" src="<?php echo $local ?>/images/chuyen_de/icons/icon_menu.webp"
+                alt="...">
+            <div class="header_center">Chuyên khoa <strong>An Đông</strong></div>
+            <img width="30" height="30" loading="lazy" src="<?php echo $local ?>/images/chuyen_de/icons/icon_dot.webp"
+                alt="...">
+        </div>
+    </header>
+    <section class="banner">
+        <div class="banner__body">
             <img loading="lazy" width="100%" height="auto"
                 srcset="<?php echo $local ?>/images/nam_khoa/banner/banner.webp 1024w, <?php echo $local ?>/images/nam_khoa/banner/banner.webp 640w"
                 sizes="(max-width: 640px) 100vw, 1024px" src="<?php echo $local ?>/images/nam_khoa/banner/banner.webp"
                 alt="...">
         </div>
-    </header>
+    </section>
+
     <section class="section__button">
         <a aria-label="liên hệ" class="animated-button"
             href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
@@ -445,6 +454,10 @@ $slides = [
                 </div>
             </div>
         </footer>
+        <div class="footer_fixed">
+            <img style="width: 100%; height: auto;" loading="lazy"
+                src="<?php echo $local ?>/images/chuyen_de/users/footer_mobile.gif" alt="...">
+        </div>
         <?php include_once 'layout/modalKhuyenMai.php' ?>
 
         <script language="javascript" src="https://npa.zoosnet.net/JS/LsJS.aspx?siteid=NPA46777247&float=1&lng=en">
